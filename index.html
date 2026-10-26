@@ -1,47 +1,43 @@
+
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Yahya Mohamed Sayed Abosreaa | Mechatronics Engineer</title>
-  <meta name="description" content="Official portfolio of Yahya Mohamed Sayed Abosreaa, Mechatronics Engineering student and LRT Train Conductor interested in railway systems, automation, AI, and data science.">
-  <meta name="author" content="Yahya Mohamed Sayed Abosreaa">
-  <meta name="theme-color" content="#07111f">
   <meta name="google-site-verification" content="PCd0Nrr4--hb4gfkpMxIYzMWFjvrIWzdDLta73WaV7M">
 
-  <link rel="canonical" href="https://yahya-mohamed.github.io/">
-  <meta property="og:title" content="Yahya Mohamed Sayed Abosreaa | Portfolio">
-  <meta property="og:description" content="Mechatronics Engineering, railway operations, automation, AI, and data science.">
-  <meta property="og:url" content="https://yahya-mohamed.github.io/">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://yahya-mohamed.github.io/profile.png">
+  <meta name="description" content="Yahya Mohamed Sayed Abosreaa — Mechatronics Engineering student with experience in railway operations, electronics, control systems, and data analysis.">
 
-  <link rel="icon" href="profile.png">
+  <meta name="author" content="Yahya Mohamed Sayed Abosreaa">
+
+  <title>Yahya Mohamed Sayed Abosreaa | Portfolio</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --bg: #07111f;
-      --bg-soft: #0b1728;
+      --bg-secondary: #0b1728;
       --card: #101f33;
-      --card-hover: #142740;
-      --text: #edf5ff;
-      --muted: #a9bad0;
-      --accent: #38d9ff;
-      --accent-2: #728cff;
-      --border: rgba(160, 190, 225, .16);
-      --shadow: 0 18px 50px rgba(0, 0, 0, .22);
+      --card-hover: #142840;
+      --text: #f3f7fc;
+      --muted: #a8b7ca;
+      --accent: #38bdf8;
+      --accent-secondary: #22d3ee;
+      --border: rgba(148, 163, 184, 0.18);
+      --shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
       --radius: 18px;
       --max-width: 1120px;
     }
 
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     html {
@@ -50,17 +46,14 @@
     }
 
     body {
-      background:
-        radial-gradient(ellipse at 15% 5%, rgba(56, 217, 255, .09), transparent 34%),
-        radial-gradient(ellipse at 90% 25%, rgba(114, 140, 255, .09), transparent 32%),
-        var(--bg);
-      color: var(--text);
       font-family: "Inter", sans-serif;
+      background: var(--bg);
+      color: var(--text);
       line-height: 1.7;
-      min-height: 100vh;
+      overflow-x: hidden;
     }
 
-    html[lang="ar"] body {
+    body[dir="rtl"] {
       font-family: "Cairo", sans-serif;
     }
 
@@ -69,13 +62,13 @@
       text-decoration: none;
     }
 
-    button {
-      font: inherit;
-    }
-
     img {
       display: block;
       max-width: 100%;
+    }
+
+    button {
+      font: inherit;
     }
 
     .container {
@@ -83,27 +76,143 @@
       margin-inline: auto;
     }
 
+    .section {
+      padding: 88px 0;
+    }
+
+    .section:nth-of-type(even) {
+      background: var(--bg-secondary);
+    }
+
+    .section-heading {
+      margin-bottom: 38px;
+      text-align: center;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      max-width: 700px;
+      margin-inline: auto;
+    }
+
+    .accent {
+      color: var(--accent);
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 46px;
+      padding: 11px 20px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--text);
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.25s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent);
+    }
+
+    .btn-primary {
+      background: linear-gradient(
+        135deg,
+        var(--accent),
+        var(--accent-secondary)
+      );
+      color: #06111f;
+      border-color: transparent;
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 10px 28px rgba(56, 189, 248, 0.2);
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(56, 189, 248, 0.5);
+    }
+
+    .card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      gap: 22px;
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .grid-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
     .site-header {
       position: sticky;
       top: 0;
-      z-index: 100;
-      background: rgba(7, 17, 31, .88);
-      backdrop-filter: blur(16px);
+      z-index: 1000;
+      background: rgba(7, 17, 31, 0.92);
+      backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border);
     }
 
-    .nav {
+    .navbar {
       min-height: 76px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 18px;
+      gap: 24px;
     }
 
     .brand {
-      font-size: 1.05rem;
       font-weight: 800;
-      letter-spacing: -.4px;
+      font-size: 1.15rem;
       white-space: nowrap;
     }
 
@@ -114,18 +223,19 @@
     .nav-links {
       display: flex;
       align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 17px;
+      gap: 22px;
+      list-style: none;
     }
 
     .nav-links a {
-      font-size: .86rem;
       color: var(--muted);
-      transition: color .2s ease;
+      font-size: 0.92rem;
+      font-weight: 600;
+      transition: color 0.2s ease;
     }
 
-    .nav-links a:hover {
+    .nav-links a:hover,
+    .nav-links a.active {
       color: var(--accent);
     }
 
@@ -135,438 +245,265 @@
       gap: 10px;
     }
 
-    .language-button,
-    .menu-button {
+    .language-toggle,
+    .menu-toggle {
+      min-height: 40px;
+      padding: 8px 12px;
       border: 1px solid var(--border);
+      border-radius: 9px;
       background: var(--card);
       color: var(--text);
-      padding: 9px 13px;
-      border-radius: 10px;
       cursor: pointer;
-      transition: .2s ease;
     }
 
-    .language-button:hover,
-    .menu-button:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-
-    .menu-button {
+    .menu-toggle {
       display: none;
+      font-size: 1.2rem;
     }
+
+    /* Hero */
 
     .hero {
-      padding: 88px 0 72px;
-      display: grid;
-      grid-template-columns: 1.35fr .65fr;
+      min-height: 690px;
+      display: flex;
       align-items: center;
-      gap: 54px;
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      background:
+        radial-gradient(
+          circle at 15% 20%,
+          rgba(56, 189, 248, 0.12),
+          transparent 32%
+        ),
+        radial-gradient(
+          circle at 90% 80%,
+          rgba(34, 211, 238, 0.08),
+          transparent 28%
+        ),
+        var(--bg);
     }
 
-    .eyebrow {
-      color: var(--accent);
-      font-size: .85rem;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-bottom: 16px;
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 360px;
+      height: 360px;
+      border: 1px solid rgba(56, 189, 248, 0.12);
+      border-radius: 50%;
+      right: -120px;
+      top: -130px;
+      z-index: -1;
     }
 
-    .hero h1 {
-      font-size: clamp(2.25rem, 5vw, 4.2rem);
-      line-height: 1.12;
-      letter-spacing: -1.8px;
-      margin-bottom: 20px;
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      align-items: center;
+      gap: 60px;
+      padding-block: 70px;
     }
 
-    html[lang="ar"] .hero h1 {
-      letter-spacing: 0;
-      line-height: 1.45;
+    .hero-text h1 {
+      font-size: clamp(2.2rem, 5vw, 4.1rem);
+      line-height: 1.15;
+      letter-spacing: -1.5px;
+      margin-bottom: 18px;
     }
 
-    .gradient-text {
-      background: linear-gradient(90deg, var(--accent), #9aabff);
-      color: transparent;
-      -webkit-background-clip: text;
-      background-clip: text;
-    }
-
-    .hero-description {
+    .hero-text h2 {
+      font-size: clamp(1.05rem, 2.4vw, 1.45rem);
       color: var(--muted);
-      max-width: 690px;
-      font-size: 1.04rem;
-      margin-bottom: 27px;
+      font-weight: 500;
+      margin-bottom: 22px;
+    }
+
+    .hero-text p {
+      color: var(--muted);
+      max-width: 650px;
+      margin-bottom: 28px;
+      font-size: 1.03rem;
     }
 
     .hero-buttons {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-bottom: 25px;
     }
 
-    .button {
-      display: inline-flex;
+    .hero-image-wrap {
+      display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 12px 19px;
-      border-radius: 12px;
-      font-weight: 700;
-      font-size: .92rem;
-      border: 1px solid transparent;
-      transition: transform .2s ease, background .2s ease;
-    }
-
-    .button:hover {
-      transform: translateY(-3px);
-    }
-
-    .button-primary {
-      background: linear-gradient(110deg, #38d9ff, #728cff);
-      color: #07111f;
-    }
-
-    .button-secondary {
-      background: rgba(255, 255, 255, .035);
-      border-color: var(--border);
-    }
-
-    .button-secondary:hover {
-      border-color: var(--accent);
-    }
-
-    .hero-socials {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-
-    .hero-socials a {
-      color: var(--muted);
-      font-size: .9rem;
-    }
-
-    .hero-socials a:hover {
-      color: var(--accent);
-    }
-
-    .profile-wrap {
-      display: flex;
       justify-content: center;
       position: relative;
     }
 
-    .profile-ring {
-      width: min(310px, 100%);
+    .hero-image-frame {
+      width: min(330px, 100%);
       aspect-ratio: 1;
-      padding: 7px;
+      padding: 8px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      box-shadow: 0 0 65px rgba(56, 217, 255, .16);
+      border: 2px solid rgba(56, 189, 248, 0.7);
+      background: linear-gradient(
+        135deg,
+        rgba(56, 189, 248, 0.18),
+        rgba(34, 211, 238, 0.03)
+      );
+      box-shadow: 0 0 70px rgba(56, 189, 248, 0.12);
     }
 
-    .profile-image {
+    .hero-image-frame img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       border-radius: 50%;
-      border: 5px solid var(--bg);
-      background: var(--card);
     }
 
-    .status-chip {
+    .hero-badge {
       position: absolute;
       bottom: 18px;
-      inset-inline-end: -5px;
-      background: var(--card);
+      left: 0;
+      padding: 12px 16px;
       border: 1px solid var(--border);
-      padding: 10px 14px;
+      background: var(--card);
       border-radius: 12px;
       box-shadow: var(--shadow);
-      font-size: .83rem;
+      font-size: 0.88rem;
       font-weight: 700;
     }
 
-    .status-dot {
-      display: inline-block;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #47e6a1;
-      margin-inline-end: 7px;
-    }
+    /* About */
 
-    section {
-      padding: 64px 0;
-    }
-
-    .section-heading {
-      margin-bottom: 30px;
-    }
-
-    .section-heading .eyebrow {
-      margin-bottom: 7px;
-    }
-
-    .section-heading h2 {
-      font-size: clamp(1.7rem, 3vw, 2.5rem);
-      line-height: 1.25;
-    }
-
-    .section-heading p {
-      color: var(--muted);
-      max-width: 720px;
-      margin-top: 10px;
-    }
-
-    .card-grid {
+    .about-content {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      align-items: start;
     }
 
-    .card {
-      padding: 24px;
-      background: linear-gradient(145deg, rgba(16, 31, 51, .96), rgba(10, 24, 41, .96));
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      transition: transform .22s ease, border-color .22s ease;
-      min-width: 0;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(56, 217, 255, .42);
-    }
-
-    .card h3 {
-      font-size: 1.08rem;
-      margin-bottom: 8px;
-      line-height: 1.45;
-    }
-
-    .card p {
+    .about-text p {
       color: var(--muted);
-      font-size: .94rem;
-    }
-
-    .card .meta {
-      color: var(--accent);
-      font-size: .85rem;
-      font-weight: 700;
-      margin-bottom: 9px;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: 20px;
+      margin-bottom: 16px;
     }
 
     .info-list {
-      list-style: none;
       display: grid;
-      gap: 12px;
+      gap: 14px;
     }
 
-    .info-list li {
+    .info-item {
       display: flex;
-      align-items: flex-start;
-      gap: 10px;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 15px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .info-item span:first-child {
       color: var(--muted);
     }
 
-    .info-list li::before {
-      content: "▹";
+    .info-item span:last-child {
+      font-weight: 600;
+      text-align: end;
+    }
+
+    /* Education and experience */
+
+    .timeline {
+      display: grid;
+      gap: 22px;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--card);
+    }
+
+    .timeline-item h3 {
+      margin-bottom: 7px;
+      font-size: 1.15rem;
+    }
+
+    .timeline-meta {
       color: var(--accent);
-      font-weight: 800;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .timeline-item p {
+      color: var(--muted);
+    }
+
+    .timeline-item ul {
+      padding-inline-start: 20px;
+      margin-top: 12px;
+      color: var(--muted);
+    }
+
+    .timeline-item li {
+      margin-bottom: 7px;
     }
 
     .tag-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 9px;
-      margin-top: 14px;
+      gap: 8px;
+      margin-top: 15px;
     }
 
     .tag {
-      display: inline-block;
-      padding: 6px 11px;
-      background: rgba(56, 217, 255, .075);
-      border: 1px solid rgba(56, 217, 255, .19);
+      display: inline-flex;
+      align-items: center;
+      padding: 5px 10px;
+      border: 1px solid var(--border);
       border-radius: 999px;
-      color: #c6f5ff;
-      font-size: .8rem;
-    }
-
-    .timeline {
-      display: grid;
-      gap: 18px;
-    }
-
-    .timeline-item {
-      position: relative;
-      padding-inline-start: 24px;
-      border-inline-start: 2px solid rgba(56, 217, 255, .3);
-    }
-
-    .timeline-item::before {
-      content: "";
-      position: absolute;
-      inset-inline-start: -6px;
-      top: 7px;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: var(--accent);
-      box-shadow: 0 0 15px rgba(56, 217, 255, .5);
-    }
-
-    .timeline-item .card {
-      box-shadow: none;
-    }
-
-    .project-card {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 12px;
-    }
-
-    .project-card .tag-list {
-      margin-top: auto;
-    }
-
-    .skill-group {
-      margin-bottom: 24px;
-    }
-
-    .skill-group:last-child {
-      margin-bottom: 0;
-    }
-
-    .skill-group h3 {
-      margin-bottom: 12px;
-    }
-
-    .certificate-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .certificate {
-      padding: 18px;
-      border: 1px solid var(--border);
-      background: var(--card);
-      border-radius: 14px;
-    }
-
-    .certificate h3 {
-      font-size: .96rem;
-      line-height: 1.5;
-      margin-bottom: 8px;
-    }
-
-    .certificate p {
       color: var(--muted);
-      font-size: .84rem;
+      font-size: 0.82rem;
+      background: rgba(255, 255, 255, 0.025);
     }
 
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-    }
+    /* Responsive */
 
-    .contact-link {
-      display: block;
-      padding: 17px 19px;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 13px;
-      overflow-wrap: anywhere;
-      transition: border-color .2s ease, transform .2s ease;
-    }
-
-    .contact-link:hover {
-      border-color: var(--accent);
-      transform: translateY(-2px);
-    }
-
-    .contact-link strong {
-      display: block;
-      margin-bottom: 4px;
-    }
-
-    .contact-link span {
-      color: var(--muted);
-      font-size: .9rem;
-    }
-
-    .footer {
-      border-top: 1px solid var(--border);
-      padding: 25px 0;
-      color: var(--muted);
-      text-align: center;
-      font-size: .86rem;
-    }
-
-    .back-to-top {
-      position: fixed;
-      bottom: 20px;
-      inset-inline-end: 20px;
-      z-index: 50;
-      width: 44px;
-      height: 44px;
-      border: 1px solid var(--border);
-      background: var(--card);
-      color: var(--accent);
-      border-radius: 50%;
-      cursor: pointer;
-      box-shadow: var(--shadow);
-    }
-
-    [dir="rtl"] .hero h1,
-    [dir="rtl"] .section-heading,
-    [dir="rtl"] .card,
-    [dir="rtl"] .certificate,
-    [dir="rtl"] .contact-link {
-      text-align: right;
-    }
-
-    @media (max-width: 900px) {
+    @media (max-width: 980px) {
       .nav-links {
-        gap: 10px;
+        gap: 14px;
       }
 
-      .nav-links a {
-        font-size: .78rem;
+      .hero-content {
+        gap: 35px;
       }
 
-      .hero {
-        gap: 30px;
+      .grid-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
-      .certificate-grid {
+      .grid-3 {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 760px) {
       .container {
         width: min(100% - 28px, var(--max-width));
       }
 
-      .nav {
+      .section {
+        padding: 64px 0;
+      }
+
+      .navbar {
         min-height: 68px;
       }
 
-      .menu-button {
+      .menu-toggle {
         display: inline-flex;
+        align-items: center;
+        justify-content: center;
       }
 
       .nav-links {
@@ -574,12 +511,12 @@
         position: absolute;
         top: 68px;
         inset-inline: 0;
-        padding: 18px 22px;
-        background: #0b1728;
-        border-bottom: 1px solid var(--border);
         flex-direction: column;
         align-items: stretch;
         gap: 0;
+        padding: 12px 20px 20px;
+        background: var(--bg-secondary);
+        border-bottom: 1px solid var(--border);
       }
 
       .nav-links.open {
@@ -587,73 +524,93 @@
       }
 
       .nav-links a {
-        padding: 10px 0;
-        font-size: .95rem;
+        display: block;
+        padding: 11px 4px;
       }
 
       .hero {
-        padding: 58px 0 45px;
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 35px;
+        min-height: auto;
       }
 
       .hero-content {
-        order: 2;
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding-block: 58px;
       }
 
-      .profile-wrap {
-        order: 1;
+      .hero-image-wrap {
+        grid-row: 1;
       }
 
-      .profile-ring {
-        width: 220px;
+      .hero-image-frame {
+        width: min(250px, 75vw);
       }
 
-      .hero-description {
+      .hero-badge {
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+      }
+
+      .hero-text p {
         margin-inline: auto;
       }
 
-      .hero-buttons,
-      .hero-socials {
+      .hero-buttons {
         justify-content: center;
       }
 
-      .status-chip {
-        inset-inline-end: 0;
-        bottom: 8px;
-      }
-
-      section {
-        padding: 45px 0;
-      }
-
-      .card-grid,
-      .about-grid,
-      .contact-grid {
+      .about-content {
         grid-template-columns: 1fr;
       }
 
-      .certificate-grid {
+      .grid-2,
+      .grid-3 {
         grid-template-columns: 1fr;
       }
 
-      .card {
-        padding: 20px;
+      .info-item {
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 440px) {
+      .brand {
+        font-size: 0.95rem;
       }
 
-      .section-heading h2 {
-        font-size: 1.8rem;
+      .nav-actions {
+        gap: 6px;
+      }
+
+      .language-toggle,
+      .menu-toggle {
+        padding: 7px 9px;
+      }
+
+      .grid-4 {
+        grid-template-columns: 1fr;
+      }
+
+      .card,
+      .timeline-item {
+        padding: 19px;
+      }
+
+      .hero-text h1 {
+        letter-spacing: -0.7px;
       }
     }
 
     @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
       *,
       *::before,
       *::after {
-        scroll-behavior: auto !important;
-        transition-duration: .01ms !important;
-        animation-duration: .01ms !important;
+        transition-duration: 0.01ms !important;
       }
     }
   </style>
@@ -661,789 +618,729 @@
 
 <body>
   <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="#home">Yahya<span>.</span></a>
+    <div class="container navbar">
+      <a class="brand" href="#home" aria-label="Home">
+        Yahya<span>.</span>
+      </a>
 
-      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
-        <a href="#about" data-i18n="navAbout">About</a>
-        <a href="#education" data-i18n="navEducation">Education</a>
-        <a href="#experience" data-i18n="navExperience">Experience</a>
-        <a href="#projects" data-i18n="navProjects">Projects</a>
-        <a href="#skills" data-i18n="navSkills">Skills</a>
-        <a href="#certificates" data-i18n="navCertificates">Certificates</a>
-        <a href="#contact" data-i18n="navContact">Contact</a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" data-en="Home" data-ar="الرئيسية">Home</a></li>
+          <li><a href="#about" data-en="About" data-ar="نبذة عني">About</a></li>
+          <li><a href="#education" data-en="Education" data-ar="التعليم">Education</a></li>
+          <li><a href="#experience" data-en="Experience" data-ar="الخبرات">Experience</a></li>
+          <li><a href="#projects" data-en="Projects" data-ar="المشروعات">Projects</a></li>
+          <li><a href="#certificates" data-en="Certificates" data-ar="الشهادات">Certificates</a></li>
+          <li><a href="#contact" data-en="Contact" data-ar="تواصل معي">Contact</a></li>
+        </ul>
       </nav>
 
       <div class="nav-actions">
-        <button class="language-button" id="languageButton" type="button" aria-label="Switch language">العربية</button>
-        <button class="menu-button" id="menuButton" type="button" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+        <button
+          class="language-toggle"
+          id="languageToggle"
+          type="button"
+          aria-label="Switch language"
+        >العربية</button>
+
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+        >☰</button>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="container hero" id="home">
-      <div class="hero-content">
-        <p class="eyebrow" data-i18n="heroEyebrow">Engineering • Railway Operations • Technology</p>
-        <h1>
-          <span data-i18n="heroGreeting">Hello, I'm</span>
-          <span class="gradient-text" data-i18n="heroName">Yahya Mohamed</span>
-        </h1>
-        <p class="hero-description" data-i18n="heroDescription">
-          Mechatronics Engineering student and LRT Train Conductor interested in railway systems, automation, electronics, artificial intelligence, and data science.
-        </p>
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <span
+            class="eyebrow"
+            data-en="Personal Portfolio"
+            data-ar="الموقع الشخصي"
+          >Personal Portfolio</span>
 
-        <div class="hero-buttons">
-          <a class="button button-primary" href="#projects" data-i18n="heroProjects">Explore My Projects</a>
-          <a class="button button-secondary" href="#contact" data-i18n="heroContact">Contact Me</a>
-          <a class="button button-secondary" href="https://www.linkedin.com/in/yahya-mohamed-sayed/" target="_blank" rel="noopener noreferrer" data-i18n="heroLinkedIn">LinkedIn Profile</a>
+          <h1>
+            Yahya Mohamed<br>
+            <span class="accent">Sayed Abosreaa</span>
+          </h1>
+
+          <h2
+            data-en="Mechatronics Engineering Student"
+            data-ar="طالب هندسة الميكاترونكس"
+          >Mechatronics Engineering Student</h2>
+
+          <p
+            data-en="Electronics Technology graduate and Mechatronics Engineering student with experience in railway operations and interests in control systems, automation, and data analysis."
+            data-ar="خريج تكنولوجيا الإلكترونيات وطالب هندسة الميكاترونكس، لدي خبرة في تشغيل السكك الحديدية واهتمامات بأنظمة التحكم والأتمتة وتحليل البيانات."
+          >Electronics Technology graduate and Mechatronics Engineering student with experience in railway operations and interests in control systems, automation, and data analysis.</p>
+
+          <div class="hero-buttons">
+            <a
+              class="btn btn-primary"
+              href="#projects"
+              data-en="View Projects"
+              data-ar="عرض المشروعات"
+            >View Projects</a>
+
+            <a
+              class="btn"
+              href="https://eg.linkedin.com/in/yahya-mohamed-sayed"
+              target="_blank"
+              rel="noopener noreferrer"
+            >LinkedIn ↗</a>
+
+            <a
+              class="btn"
+              href="#contact"
+              data-en="Contact Me"
+              data-ar="تواصل معي"
+            >Contact Me</a>
+          </div>
         </div>
 
-        <div class="hero-socials">
-          <a href="https://github.com/YahYa-mohamed" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://www.kaggle.com/yahyamohamedsayed" target="_blank" rel="noopener noreferrer">Kaggle</a>
-          <a href="https://youtube.com/@yahyamohamedsayed" target="_blank" rel="noopener noreferrer">YouTube</a>
-          <a href="https://www.facebook.com/profile.php?id=100010721436788" target="_blank" rel="noopener noreferrer">Facebook</a>
-        </div>
-      </div>
+        <div class="hero-image-wrap">
+          <div class="hero-image-frame">
+            <img
+              src="profile.png"
+              alt="Yahya Mohamed Sayed Abosreaa"
+              width="400"
+              height="400"
+              fetchpriority="high"
+            >
+          </div>
 
-      <div class="profile-wrap">
-        <div class="profile-ring">
-          <img class="profile-image" src="profile.png" alt="Portrait of Yahya Mohamed Sayed Abosreaa">
-        </div>
-        <div class="status-chip">
-          <span class="status-dot"></span>
-          <span data-i18n="statusChip">Engineering & Innovation</span>
+          <div
+            class="hero-badge"
+            data-en="Mechatronics Engineering"
+            data-ar="هندسة الميكاترونكس"
+          >Mechatronics Engineering</div>
         </div>
       </div>
     </section>
 
-    <section id="about">
+    <!-- ABOUT SECTION -->
+    <section class="section" id="about">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow" data-i18n="aboutEyebrow">Introduction</p>
-          <h2 data-i18n="aboutTitle">About Me</h2>
-          <p data-i18n="aboutIntro">A combination of practical railway operations and an engineering mindset.</p>
+          <span class="eyebrow" data-en="Introduction" data-ar="مقدمة">Introduction</span>
+          <h2 data-en="About Me" data-ar="نبذة عني">About Me</h2>
+          <p
+            data-en="My educational background, professional experience, and technical interests."
+            data-ar="خلفيتي التعليمية وخبرتي العملية واهتماماتي التقنية."
+          >My educational background, professional experience, and technical interests.</p>
         </div>
 
-        <div class="about-grid">
-          <article class="card">
-            <h3 data-i18n="aboutCardTitle">Professional Summary</h3>
-            <p data-i18n="aboutText">
-              I work in Light Rail Transit (LRT) operations while pursuing a Mechatronics Engineering degree at Tanta University. My interests include railway signalling, control systems, automation, embedded systems, artificial intelligence, and data analysis. I aim to connect real operational experience with engineering and data-driven solutions.
-            </p>
+        <div class="about-content">
+          <div class="about-text">
+            <p
+              data-en="I graduated in Electronics Technology from Helwan University with a Very Good grade with honors and an overall score of 84.5%. I am currently studying Mechatronics Engineering at Tanta University."
+              data-ar="تخرجت في تكنولوجيا الإلكترونيات من جامعة حلوان بتقدير جيد جدًا مع مرتبة الشرف وبمجموع 84.5%. وأدرس حاليًا هندسة الميكاترونكس بجامعة طنطا."
+            >I graduated in Electronics Technology from Helwan University with a Very Good grade with honors and an overall score of 84.5%. I am currently studying Mechatronics Engineering at Tanta University.</p>
+
+            <p
+              data-en="My professional experience includes railway operations at RATP Dev Mobility Cairo. My technical interests include electronics, control systems, automation, and data analysis."
+              data-ar="تشمل خبرتي العملية تشغيل القطارات في شركة RATP Dev Mobility Cairo. وتشمل اهتماماتي التقنية الإلكترونيات وأنظمة التحكم والأتمتة وتحليل البيانات."
+            >My professional experience includes railway operations at RATP Dev Mobility Cairo. My technical interests include electronics, control systems, automation, and data analysis.</p>
+          </div>
+
+          <div class="card info-list">
+            <div class="info-item">
+              <span data-en="Full Name" data-ar="الاسم بالكامل">Full Name</span>
+              <span>Yahya Mohamed Sayed Abosreaa</span>
+            </div>
+
+            <div class="info-item">
+              <span data-en="Field" data-ar="التخصص">Field</span>
+              <span data-en="Mechatronics Engineering" data-ar="هندسة الميكاترونكس">Mechatronics Engineering</span>
+            </div>
+
+            <div class="info-item">
+              <span data-en="University" data-ar="الجامعة">University</span>
+              <span data-en="Tanta University" data-ar="جامعة طنطا">Tanta University</span>
+            </div>
+
+            <div class="info-item">
+              <span data-en="Location" data-ar="الموقع">Location</span>
+              <span>Badr City, Cairo, Egypt</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow" data-en="Academic Background" data-ar="الخلفية الأكاديمية">Academic Background</span>
+          <h2 data-en="Education" data-ar="التعليم">Education</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <h3
+              data-en="Bachelor of Engineering — Mechatronics Engineering"
+              data-ar="بكالوريوس الهندسة — هندسة الميكاترونكس"
+            >Bachelor of Engineering — Mechatronics Engineering</h3>
+
+            <div
+              class="timeline-meta"
+              data-en="Tanta University | December 2023 – Expected 2028"
+              data-ar="جامعة طنطا | ديسمبر 2023 – التخرج المتوقع 2028"
+            >Tanta University | December 2023 – Expected 2028</div>
+
+            <p
+              data-en="Faculty of Engineering, Mechatronics Engineering."
+              data-ar="كلية الهندسة، قسم هندسة الميكاترونكس."
+            >Faculty of Engineering, Mechatronics Engineering.</p>
           </article>
 
-          <article class="card">
-            <h3 data-i18n="highlightsTitle">Highlights</h3>
-            <ul class="info-list">
-              <li data-i18n="highlight1">LRT train operations and passenger safety</li>
-              <li data-i18n="highlight2">Mechatronics, electronics, and control fundamentals</li>
-              <li data-i18n="highlight3">Python, data analysis, and machine learning foundations</li>
-              <li data-i18n="highlight4">Interest in railway signalling and automation</li>
+          <article class="timeline-item">
+            <h3
+              data-en="Bachelor's Degree in Technology and Education — Electronics Technology"
+              data-ar="بكالوريوس التكنولوجيا والتعليم — تكنولوجيا الإلكترونيات"
+            >Bachelor's Degree in Technology and Education — Electronics Technology</h3>
+
+            <div
+              class="timeline-meta"
+              data-en="Helwan University | October 2017 – July 2021"
+              data-ar="جامعة حلوان | أكتوبر 2017 – يوليو 2021"
+            >Helwan University | October 2017 – July 2021</div>
+
+            <p
+              data-en="Grade: Very Good with Honors | Overall Score: 84.5%"
+              data-ar="التقدير: جيد جدًا مع مرتبة الشرف | المجموع: 84.5%"
+            >Grade: Very Good with Honors | Overall Score: 84.5%</p>
+          </article>
+
+          <article class="timeline-item">
+            <h3
+              data-en="Advanced Data Analysis Scholarship"
+              data-ar="منحة تحليل البيانات المتقدم"
+            >Advanced Data Analysis Scholarship</h3>
+
+            <div class="timeline-meta">Udacity | 2020</div>
+          </article>
+
+          <article class="timeline-item">
+            <h3
+              data-en="English Access Micro-Scholarship Program"
+              data-ar="برنامج المنحة المصغرة لتعلم اللغة الإنجليزية"
+            >English Access Micro-Scholarship Program</h3>
+
+            <div class="timeline-meta">U.S. Embassy | 2017–2019</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow" data-en="Professional Background" data-ar="الخلفية المهنية">Professional Background</span>
+          <h2 data-en="Experience" data-ar="الخبرات العملية">Experience</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <h3
+              data-en="LRT Train Conductor"
+              data-ar="قائد قطار القطار الكهربائي الخفيف"
+            >LRT Train Conductor</h3>
+
+            <div
+              class="timeline-meta"
+              data-en="RATP Dev Mobility Cairo | April 2023 – Present | Badr City, Cairo, Egypt"
+              data-ar="RATP Dev Mobility Cairo | أبريل 2023 – حتى الآن | مدينة بدر، القاهرة، مصر"
+            >RATP Dev Mobility Cairo | April 2023 – Present | Badr City, Cairo, Egypt</div>
+
+            <ul>
+              <li
+                data-en="Operate LRT trains on the main line and within the depot."
+                data-ar="تشغيل قطارات القطار الكهربائي الخفيف على الخط الرئيسي وداخل المستودع."
+              >Operate LRT trains on the main line and within the depot.</li>
+
+              <li
+                data-en="Follow signalling indications and operational safety procedures."
+                data-ar="اتباع إشارات السكك الحديدية وإجراءات السلامة التشغيلية."
+              >Follow signalling indications and operational safety procedures.</li>
+
+              <li
+                data-en="Maintain passenger safety and report incidents to the traffic controller."
+                data-ar="الحفاظ على سلامة الركاب والإبلاغ عن الحوادث لمراقب الحركة."
+              >Maintain passenger safety and report incidents to the traffic controller.</li>
+
+              <li
+                data-en="Perform pre-service checks and coordinate with operations control and depot staff."
+                data-ar="إجراء الفحوصات قبل الخدمة والتنسيق مع مركز التحكم وموظفي المستودع."
+              >Perform pre-service checks and coordinate with operations control and depot staff.</li>
+
+              <li
+                data-en="Carry out train stabling and unstabling procedures."
+                data-ar="تنفيذ إجراءات إيواء القطارات وإخراجها من المستودع."
+              >Carry out train stabling and unstabling procedures.</li>
             </ul>
           </article>
+
+          <article class="timeline-item">
+            <h3
+              data-en="Customer Service Representative"
+              data-ar="ممثل خدمة عملاء"
+            >Customer Service Representative</h3>
+
+            <div
+              class="timeline-meta"
+              data-en="National Bank of Egypt | December 2022 – March 2023 | Cairo, Egypt"
+              data-ar="البنك الأهلي المصري | ديسمبر 2022 – مارس 2023 | القاهرة، مصر"
+            >National Bank of Egypt | December 2022 – March 2023 | Cairo, Egypt</div>
+          </article>
+
+          <article class="timeline-item">
+            <h3
+              data-en="Home Appliance Maintenance Trainee"
+              data-ar="متدرب صيانة أجهزة منزلية"
+            >Home Appliance Maintenance Trainee</h3>
+
+            <div
+              class="timeline-meta"
+              data-en="El-Araby Group | June 2015 – July 2015"
+              data-ar="مجموعة العربي | يونيو 2015 – يوليو 2015"
+            >El-Araby Group | June 2015 – July 2015</div>
+          </article>
         </div>
       </div>
     </section>
-
-    <section id="education">
+    
+    <!-- PROJECTS SECTION -->
+    <section class="section" id="projects">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow" data-i18n="educationEyebrow">Academic Background</p>
-          <h2 data-i18n="educationTitle">Education</h2>
+          <span class="eyebrow" data-en="Technical Work" data-ar="الأعمال التقنية">Technical Work</span>
+          <h2 data-en="Projects" data-ar="المشروعات">Projects</h2>
         </div>
 
-        <div class="timeline">
-          <div class="timeline-item">
-            <article class="card">
-              <p class="meta" data-i18n="edu1Date">Dec 2023 – Expected 2028</p>
-              <h3 data-i18n="edu1Title">Bachelor of Engineering in Mechatronics Engineering</h3>
-              <p data-i18n="edu1Place">Faculty of Engineering, Tanta University, Egypt</p>
-              <div class="tag-list">
-                <span class="tag" data-i18n="edu1Tag1">Robotics</span>
-                <span class="tag" data-i18n="edu1Tag2">Automation</span>
-                <span class="tag" data-i18n="edu1Tag3">Control Systems</span>
-              </div>
-            </article>
-          </div>
+        <div class="grid grid-2">
+          <article class="card">
+            <h3
+              data-en="Self-Driving Car with Text-to-Speech Recognition"
+              data-ar="سيارة ذاتية القيادة مع تحويل النص إلى كلام"
+            >Self-Driving Car with Text-to-Speech Recognition</h3>
 
-          <div class="timeline-item">
-            <article class="card">
-              <p class="meta" data-i18n="edu2Date">Oct 2017 – Jul 2021</p>
-              <h3 data-i18n="edu2Title">Bachelor's Degree in Technology and Education – Electronics Technology</h3>
-              <p data-i18n="edu2Place">Helwan University, Cairo, Egypt</p>
-              <div class="tag-list">
-                <span class="tag" data-i18n="edu2Tag1">Very Good with Honors</span>
-                <span class="tag">84.5%</span>
-                <span class="tag" data-i18n="edu2Tag2">Electronics</span>
-              </div>
-            </article>
-          </div>
+            <p
+              data-en="A project using Arduino, ultrasonic and infrared sensors, Bluetooth, and Wi-Fi."
+              data-ar="مشروع يستخدم أردوينو ومستشعرات الموجات فوق الصوتية والأشعة تحت الحمراء والبلوتوث والواي فاي."
+            >A project using Arduino, ultrasonic and infrared sensors, Bluetooth, and Wi-Fi.</p>
 
-          <div class="timeline-item">
-            <article class="card">
-              <p class="meta" data-i18n="edu3Date">2020</p>
-              <h3 data-i18n="edu3Title">Advanced Data Analysis Nanodegree</h3>
-              <p data-i18n="edu3Place">Udacity Scholarship Program</p>
-              <div class="tag-list">
-                <span class="tag">Data Analysis</span>
-                <span class="tag">Statistics</span>
-                <span class="tag">Data Visualization</span>
-              </div>
-            </article>
-          </div>
-
-          <div class="timeline-item">
-            <article class="card">
-              <p class="meta" data-i18n="edu4Date">2017 – 2019</p>
-              <h3 data-i18n="edu4Title">English Access Micro-Scholarship Program</h3>
-              <p data-i18n="edu4Place">U.S. Embassy in Egypt</p>
-              <p data-i18n="edu4Text">Two-year English language program, including training camps.</p>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="experience">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow" data-i18n="experienceEyebrow">Professional Journey</p>
-          <h2 data-i18n="experienceTitle">Experience</h2>
-        </div>
-
-        <div class="timeline">
-          <div class="timeline-item">
-            <article class="card">
-              <p class="meta" data-i18n="job1Date">Apr 2023 – Present</p>
-              <h3 data-i18n="job1Title">LRT Train Conductor</h3>
-              <p class="meta" data-i18n="job1Company">RATP Dev Mobility Cairo · Badr City, Egypt</p>
-              <ul class="info-list">
-                <li data-i18n="job1Bullet1">Operate Light Rail Transit trains on the main line and within the depot, following operational rules and instructions.</li>
-                <li data-i18n="job1Bullet2">Prioritize passenger safety during normal, degraded, and emergency operating conditions.</li>
-                <li data-i18n="job1Bullet3">Report incidents, accidents, train faults, and abnormal conditions to the traffic controller.</li>
-                <li data-i18n="job1Bullet4">Follow onboard and wayside signalling indications and comply with operating procedures.</li>
-                <li data-i18n="job1Bullet5">Carry out stabling and unstabling procedures and complete required pre-service safety checks.</li>
-                <li data-i18n="job1Bullet6">Coordinate with operations control and depot personnel to support safe and reliable service.</li>
-              </ul>
-            </article>
-          </div>
-
-          <div class="timeline-item">
-            <article class="card">
-              <p class="meta" data-i18n="job2Date">Dec 2022 – Mar 2023</p>
-              <h3 data-i18n="job2Title">Customer Service Representative</h3>
-              <p class="meta" data-i18n="job2Company">National Bank of Egypt · Cairo, Egypt</p>
-              <ul class="info-list">
-                <li data-i18n="job2Bullet1">Supported customers with banking inquiries and service-related requests.</li>
-                <li data-i18n="job2Bullet2">Worked to maintain service quality and follow customer protection procedures.</li>
-                <li data-i18n="job2Bullet3">Followed relevant procedures for identifying and reporting suspicious activity.</li>
-              </ul>
-            </article>
-          </div>
-
-          <div class="timeline-item">
-            <article class="card">
-              <p class="meta" data-i18n="job3Date">Jun 2015 – Jul 2015</p>
-              <h3 data-i18n="job3Title">Home Appliance Maintenance Trainee</h3>
-              <p class="meta" data-i18n="job3Company">El-Araby Group · Egypt</p>
-              <p data-i18n="job3Text">Introductory practical exposure to home appliance maintenance and technical troubleshooting.</p>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow" data-i18n="projectsEyebrow">Engineering & Innovation</p>
-          <h2 data-i18n="projectsTitle">Projects</h2>
-          <p data-i18n="projectsIntro">Academic work and project concepts connecting engineering, railways, and data.</p>
-        </div>
-
-        <div class="card-grid">
-          <article class="card project-card">
-            <h3 data-i18n="project1Title">Self-Driving Car with Text-to-Speech Recognition</h3>
-            <p data-i18n="project1Text">An academic project exploring a small autonomous vehicle using electronic sensors and embedded hardware.</p>
             <div class="tag-list">
               <span class="tag">Arduino</span>
-              <span class="tag">Ultrasonic Sensor</span>
-              <span class="tag">IR Sensor</span>
+              <span class="tag">Sensors</span>
               <span class="tag">Bluetooth</span>
               <span class="tag">Wi-Fi</span>
             </div>
           </article>
 
-          <article class="card project-card">
-            <h3 data-i18n="project2Title">PLC-Based Railway Interlocking with SCADA Monitoring</h3>
-            <p data-i18n="project2Text">A proposed graduation project to model railway routes and interlocking logic, with supervisory monitoring and simulated status displays.</p>
+          <article class="card">
+            <h3
+              data-en="PLC-Based Railway Interlocking System with SCADA Monitoring"
+              data-ar="نظام تشابك إشارات السكك الحديدية باستخدام PLC مع مراقبة SCADA"
+            >PLC-Based Railway Interlocking System with SCADA Monitoring</h3>
+
+            <p
+              data-en="Proposed graduation project focused on railway interlocking, programmable logic controllers, and supervisory monitoring."
+              data-ar="مشروع تخرج مقترح يركز على تشابك إشارات السكك الحديدية ووحدات التحكم المنطقية القابلة للبرمجة وأنظمة المراقبة."
+            >Proposed graduation project focused on railway interlocking, programmable logic controllers, and supervisory monitoring.</p>
+
             <div class="tag-list">
               <span class="tag">PLC</span>
               <span class="tag">SCADA</span>
               <span class="tag">Railway Signalling</span>
-              <span class="tag">Automation</span>
             </div>
           </article>
 
-          <article class="card project-card">
-            <h3 data-i18n="project3Title">AI Passenger Flow Prediction for Metro Stations</h3>
-            <p data-i18n="project3Text">A proposed data science project to analyze passenger counts and predict demand for future time periods, supporting operational planning.</p>
+          <article class="card">
+            <h3
+              data-en="AI Passenger Flow Prediction for Metro Stations"
+              data-ar="التنبؤ بتدفق الركاب في محطات المترو باستخدام الذكاء الاصطناعي"
+            >AI Passenger Flow Prediction for Metro Stations</h3>
+
+            <p
+              data-en="Proposed project focused on passenger flow analysis and prediction using data analysis and artificial intelligence."
+              data-ar="مشروع مقترح لتحليل تدفق الركاب والتنبؤ به باستخدام تحليل البيانات والذكاء الاصطناعي."
+            >Proposed project focused on passenger flow analysis and prediction using data analysis and artificial intelligence.</p>
+
             <div class="tag-list">
               <span class="tag">Python</span>
               <span class="tag">Data Analysis</span>
-              <span class="tag">Machine Learning</span>
-              <span class="tag">Railway</span>
+              <span class="tag">AI</span>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="skills">
+    <!-- SKILLS SECTION -->
+    <section class="section" id="skills">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow" data-i18n="skillsEyebrow">Technical Toolkit</p>
-          <h2 data-i18n="skillsTitle">Skills</h2>
+          <span class="eyebrow" data-en="Technical Abilities" data-ar="المهارات التقنية">Technical Abilities</span>
+          <h2 data-en="Skills" data-ar="المهارات">Skills</h2>
         </div>
 
-        <div class="card">
-          <div class="skill-group">
-            <h3 data-i18n="skillGroup1">Railway Operations & Safety</h3>
+        <div class="grid grid-3">
+          <article class="card">
+            <h3 data-en="Railway Operations" data-ar="تشغيل السكك الحديدية">Railway Operations</h3>
             <div class="tag-list">
-              <span class="tag" data-i18n="skill1">LRT Operations</span>
-              <span class="tag" data-i18n="skill2">Passenger Safety</span>
-              <span class="tag" data-i18n="skill3">Operating Procedures</span>
-              <span class="tag" data-i18n="skill4">Signalling Compliance</span>
-              <span class="tag" data-i18n="skill5">Incident Reporting</span>
+              <span class="tag">Railway Operations</span>
+              <span class="tag">Operational Safety</span>
+              <span class="tag">Signalling Compliance</span>
+              <span class="tag">Train Stabling</span>
             </div>
-          </div>
+          </article>
 
-          <div class="skill-group">
-            <h3 data-i18n="skillGroup2">Engineering & Automation</h3>
+          <article class="card">
+            <h3 data-en="Engineering & Automation" data-ar="الهندسة والأتمتة">Engineering & Automation</h3>
             <div class="tag-list">
-              <span class="tag">Mechatronics</span>
               <span class="tag">Electronics</span>
-              <span class="tag" data-i18n="skill6">Control Systems</span>
+              <span class="tag">Mechatronics</span>
+              <span class="tag">Control Systems</span>
               <span class="tag">Arduino</span>
               <span class="tag">Sensors</span>
-              <span class="tag">Robotics</span>
               <span class="tag">PLC</span>
               <span class="tag">SCADA</span>
               <span class="tag">HMI</span>
-              <span class="tag" data-i18n="skill7">Motor Control</span>
+              <span class="tag">Motor Control</span>
+              <span class="tag">Robotics</span>
             </div>
-          </div>
+          </article>
 
-          <div class="skill-group">
-            <h3 data-i18n="skillGroup3">Data & Programming</h3>
+          <article class="card">
+            <h3 data-en="Data & Programming" data-ar="البيانات والبرمجة">Data & Programming</h3>
             <div class="tag-list">
               <span class="tag">Python</span>
               <span class="tag">SQL</span>
-              <span class="tag" data-i18n="skill8">Data Analysis</span>
-              <span class="tag" data-i18n="skill9">Statistics</span>
-              <span class="tag" data-i18n="skill10">Data Visualization</span>
+              <span class="tag">Data Analysis</span>
+              <span class="tag">Statistics</span>
+              <span class="tag">Data Visualization</span>
               <span class="tag">Machine Learning</span>
               <span class="tag">Artificial Intelligence</span>
             </div>
-          </div>
-
-          <p style="color:var(--muted);font-size:.85rem;margin-top:18px" data-i18n="skillsNote">
-            Some automation and data topics are ongoing learning areas; the tags describe areas of experience and interest, not necessarily professional mastery.
-          </p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="certificates">
+    <!-- CERTIFICATES SECTION -->
+    <section class="section" id="certificates">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow" data-i18n="certificatesEyebrow">Continuous Learning</p>
-          <h2 data-i18n="certificatesTitle">Certificates & Courses</h2>
-          <p data-i18n="certificatesIntro">Selected courses and learning achievements across data, AI, engineering, and communication.</p>
+          <span class="eyebrow" data-en="Learning & Development" data-ar="التعلم والتطوير">Learning & Development</span>
+          <h2 data-en="Certificates & Courses" data-ar="الشهادات والدورات">Certificates & Courses</h2>
         </div>
 
-        <div class="certificate-grid">
-          <article class="certificate">
-            <h3>Advanced Data Analysis Nanodegree</h3>
+        <div class="grid grid-3">
+          <article class="card">
+            <h3>Advanced Data Analysis</h3>
             <p>Udacity</p>
           </article>
-          <article class="certificate">
+
+          <article class="card">
             <h3>Machine Learning Nanodegree</h3>
             <p>Udemy</p>
           </article>
-          <article class="certificate">
+
+          <article class="card">
             <h3>Artificial Intelligence Analyst 2020 Mastery Exam</h3>
             <p>IBM</p>
           </article>
-          <article class="certificate">
+
+          <article class="card">
             <h3>Machine Learning</h3>
             <p>Stanford University</p>
           </article>
-          <article class="certificate">
+
+          <article class="card">
             <h3>Mathematics for Machine Learning: Linear Algebra</h3>
             <p>Imperial College London</p>
           </article>
-          <article class="certificate">
+
+          <article class="card">
             <h3>Programming for Everybody (Getting Started with Python)</h3>
             <p>University of Michigan</p>
           </article>
-          <article class="certificate">
+
+          <article class="card">
             <h3>Python Data Structures</h3>
             <p>University of Michigan</p>
           </article>
-          <article class="certificate">
-            <h3>Using Python to Access Web Data</h3>
-            <p>University of Michigan</p>
-          </article>
-          <article class="certificate">
-            <h3>Foundations: Data, Data, Everywhere</h3>
-            <p>Google</p>
-          </article>
-          <article class="certificate">
-            <h3>Finite Element Analysis: Convergence and Mesh Independence</h3>
-            <p>Coursera</p>
-          </article>
-          <article class="certificate">
-            <h3>Motors and Motor Control Circuits</h3>
-            <p>University of Colorado Boulder</p>
-          </article>
-          <article class="certificate">
-            <h3>EF SET English Certificate — 78/100, C2 Proficient</h3>
-            <p>EF SET</p>
-          </article>
-          <article class="certificate">
+
+          <article class="card">
             <h3>Write Professional Emails in English</h3>
             <p>Georgia Institute of Technology</p>
           </article>
-          <article class="certificate">
+
+          <article class="card">
+            <h3>Using Python to Access Web Data</h3>
+            <p>University of Michigan</p>
+          </article>
+
+          <article class="card">
             <h3>Speak English Professionally: In Person, Online & on the Phone</h3>
             <p>Georgia Institute of Technology</p>
           </article>
-          <article class="certificate">
+
+          <article class="card">
             <h3>Build Your Professional ePortfolio in English</h3>
             <p>Georgia Institute of Technology</p>
           </article>
-          <article class="certificate">
+
+          <article class="card">
             <h3>Take Your English Communication Skills to the Next Level</h3>
             <p>Georgia Institute of Technology</p>
           </article>
-          <article class="certificate">
+
+          <article class="card">
             <h3>Improve Your English Communication Skills Specialization</h3>
             <p>Georgia Institute of Technology</p>
           </article>
-          <article class="certificate">
-            <h3>English for Business and Entrepreneurship — MOOC 2022</h3>
+
+          <article class="card">
+            <h3>Foundations: Data, Data, Everywhere</h3>
+            <p>Google</p>
+          </article>
+
+          <article class="card">
+            <h3>English for Business and Entrepreneurship Self-Paced MOOC 2022</h3>
             <p>U.S. Department of State</p>
           </article>
-          <article class="certificate">
-            <h3>Teaching English to Young Learners — MOOC Summer 2022</h3>
+
+          <article class="card">
+            <h3>Teaching English to Young Learners Self-Paced MOOC Summer 2022</h3>
             <p>U.S. Department of State</p>
           </article>
-          <article class="certificate">
-            <h3>English for Career Development — MOOC 2022</h3>
+
+          <article class="card">
+            <h3>English for Career Development Self-Paced MOOC 2022</h3>
             <p>U.S. Department of State</p>
           </article>
-          <article class="certificate">
-            <h3>English for Science, Technology, Engineering, and Mathematics (STEM)</h3>
+
+          <article class="card">
+            <h3>English for Science, Technology, Engineering, and Mathematics (STEM) MOOC 2022</h3>
             <p>U.S. Department of State</p>
           </article>
-          <article class="certificate">
-            <h3>English for Journalism — Self-Paced MOOC 2022</h3>
+
+          <article class="card">
+            <h3>English for Journalism Self-Paced MOOC 2022</h3>
             <p>U.S. Department of State</p>
           </article>
-          <article class="certificate">
+
+          <article class="card">
+            <h3>Finite Element Analysis Convergence and Mesh Independence</h3>
+            <p>Coursera</p>
+          </article>
+
+          <article class="card">
+            <h3>Motors and Motor Control Circuits</h3>
+            <p>University of Colorado Boulder</p>
+          </article>
+
+          <article class="card">
             <h3>Leadership and Teamwork Skills</h3>
             <p>Edraak</p>
           </article>
-          <article class="certificate">
-            <h3>International Computer Driving Licence — ICDL Base</h3>
+
+          <article class="card">
+            <h3>ICDL Base</h3>
             <p>Edraak</p>
           </article>
-          <article class="certificate">
-            <h3>English Access Micro-Scholarship Program</h3>
-            <p>U.S. Embassy in Egypt</p>
+
+          <article class="card">
+            <h3>EF SET English Certificate — 78/100 (C2 Proficient)</h3>
+            <p>EF SET</p>
           </article>
-          <article class="certificate">
+
+          <article class="card">
             <h3>Classic Control Course</h3>
-            <p>B Control Academy — YouTube course</p>
+            <p>B Control Academy</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="languages">
+    <!-- LANGUAGES SECTION -->
+    <section class="section" id="languages">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow" data-i18n="languagesEyebrow">Communication</p>
-          <h2 data-i18n="languagesTitle">Languages</h2>
+          <span class="eyebrow" data-en="Communication" data-ar="التواصل">Communication</span>
+          <h2 data-en="Languages" data-ar="اللغات">Languages</h2>
         </div>
 
-        <div class="card-grid">
+        <div class="grid grid-3">
           <article class="card">
-            <h3 data-i18n="languageArabic">Arabic</h3>
-            <p data-i18n="languageNative">Native</p>
+            <h3 data-en="Arabic" data-ar="العربية">Arabic</h3>
+            <p data-en="Native" data-ar="اللغة الأم">Native</p>
           </article>
+
           <article class="card">
-            <h3 data-i18n="languageEnglish">English</h3>
-            <p data-i18n="languageEnglishLevel">EF SET: 78/100 — C2 Proficient</p>
+            <h3 data-en="English" data-ar="الإنجليزية">English</h3>
+            <p data-en="C2 — Proficient" data-ar="C2 — إتقان متقدم">C2 — Proficient</p>
           </article>
+
           <article class="card">
-            <h3 data-i18n="languageGerman">German</h3>
-            <p data-i18n="languageGermanLevel">Language listed; level not specified.</p>
+            <h3 data-en="German" data-ar="الألمانية">German</h3>
+            <p data-en="Basic" data-ar="مستوى أساسي">Basic</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="contact">
+    <!-- CONTACT SECTION -->
+    <section class="section" id="contact">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow" data-i18n="contactEyebrow">Let's Connect</p>
-          <h2 data-i18n="contactTitle">Contact & Profiles</h2>
-          <p data-i18n="contactIntro">Explore my professional profiles and follow my learning journey.</p>
+          <span class="eyebrow" data-en="Get in Touch" data-ar="تواصل معي">Get in Touch</span>
+          <h2 data-en="Contact" data-ar="التواصل">Contact</h2>
+          <p
+            data-en="Connect with me through my professional and social platforms."
+            data-ar="يمكنك التواصل معي من خلال حساباتي المهنية والاجتماعية."
+          >Connect with me through my professional and social platforms.</p>
         </div>
 
-        <div class="contact-grid">
-          <a class="contact-link" href="https://eg.linkedin.com/in/yahya-mohamed-sayed" target="_blank" rel="noopener noreferrer">
-            <strong>LinkedIn</strong>
-            <span>linkedin.com/in/yahya-mohamed-sayed</span>
+        <div class="grid grid-3">
+          <a
+            class="card"
+            href="https://eg.linkedin.com/in/yahya-mohamed-sayed"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <h3>LinkedIn ↗</h3>
+            <p>Professional profile</p>
           </a>
-          <a class="contact-link" href="https://github.com/YahYa-mohamed" target="_blank" rel="noopener noreferrer">
-            <strong>GitHub</strong>
-            <span>github.com/YahYa-mohamed</span>
-          </a>
-          <a class="contact-link" href="https://www.kaggle.com/yahyamohamedsayed" target="_blank" rel="noopener noreferrer">
-            <strong>Kaggle</strong>
-            <span>kaggle.com/yahyamohamedsayed</span>
-          </a>
-          <a class="contact-link" href="https://youtube.com/@yahyamohamedsayed" target="_blank" rel="noopener noreferrer">
-            <strong>YouTube</strong>
-            <span>youtube.com/@yahyamohamedsayed</span>
-          </a>
-          <a class="contact-link" href="https://www.facebook.com/profile.php?id=100010721436788" target="_blank" rel="noopener noreferrer">
-            <strong>Facebook</strong>
-            <span>facebook.com</span>
-          </a>
-        </div>
 
-        <div class="card" style="margin-top:18px">
-          <h3 data-i18n="contactNameTitle">Full Name</h3>
-          <p data-i18n="fullNameArabic">يحى محمد سيد أبوسريع</p>
-          <p>Yahya Mohamed Sayed Abosreaa</p>
+          <a
+            class="card"
+            href="https://github.com/YahYa-mohamed"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <h3>GitHub ↗</h3>
+            <p>Projects and code</p>
+          </a>
+
+          <a
+            class="card"
+            href="https://www.kaggle.com/yahyamohamedsayed"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <h3>Kaggle ↗</h3>
+            <p>Data science profile</p>
+          </a>
+
+          <a
+            class="card"
+            href="https://youtube.com/@yahyamohamedsayed"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <h3>YouTube ↗</h3>
+            <p>Channel</p>
+          </a>
+
+          <a
+            class="card"
+            href="https://www.facebook.com/profile.php?id=100010721436788"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <h3>Facebook ↗</h3>
+            <p>Social profile</p>
+          </a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <p>© <span id="currentYear"></span> Yahya Mohamed Sayed Abosreaa. <span data-i18n="footerRights">All rights reserved.</span></p>
+  <!-- FOOTER -->
+  <footer style="padding: 28px 0; border-top: 1px solid var(--border); background: var(--bg-secondary);">
+    <div class="container" style="text-align: center;">
+      <p class="muted">
+        © <span id="currentYear"></span>
+        Yahya Mohamed Sayed Abosreaa.
+        <span data-en="All rights reserved." data-ar="جميع الحقوق محفوظة.">All rights reserved.</span>
+      </p>
     </div>
   </footer>
 
-  <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top" title="Back to top">↑</button>
-
   <script>
-    const translations = {
-      en: {
-        navAbout: "About",
-        navEducation: "Education",
-        navExperience: "Experience",
-        navProjects: "Projects",
-        navSkills: "Skills",
-        navCertificates: "Certificates",
-        navContact: "Contact",
-        heroEyebrow: "Engineering • Railway Operations • Technology",
-        heroGreeting: "Hello, I'm",
-        heroName: "Yahya Mohamed",
-        heroDescription: "Mechatronics Engineering student and LRT Train Conductor interested in railway systems, automation, electronics, artificial intelligence, and data science.",
-        heroProjects: "Explore My Projects",
-        heroContact: "Contact Me",
-        heroLinkedIn: "LinkedIn Profile",
-        statusChip: "Engineering & Innovation",
-        aboutEyebrow: "Introduction",
-        aboutTitle: "About Me",
-        aboutIntro: "A combination of practical railway operations and an engineering mindset.",
-        aboutCardTitle: "Professional Summary",
-        aboutText: "I work in Light Rail Transit (LRT) operations while pursuing a Mechatronics Engineering degree at Tanta University. My interests include railway signalling, control systems, automation, embedded systems, artificial intelligence, and data analysis. I aim to connect real operational experience with engineering and data-driven solutions.",
-        highlightsTitle: "Highlights",
-        highlight1: "LRT train operations and passenger safety",
-        highlight2: "Mechatronics, electronics, and control fundamentals",
-        highlight3: "Python, data analysis, and machine learning foundations",
-        highlight4: "Interest in railway signalling and automation",
-        educationEyebrow: "Academic Background",
-        educationTitle: "Education",
-        edu1Date: "Dec 2023 – Expected 2028",
-        edu1Title: "Bachelor of Engineering in Mechatronics Engineering",
-        edu1Place: "Faculty of Engineering, Tanta University, Egypt",
-        edu1Tag1: "Robotics",
-        edu1Tag2: "Automation",
-        edu1Tag3: "Control Systems",
-        edu2Date: "Oct 2017 – Jul 2021",
-        edu2Title: "Bachelor's Degree in Technology and Education – Electronics Technology",
-        edu2Place: "Helwan University, Cairo, Egypt",
-        edu2Tag1: "Very Good with Honors",
-        edu2Tag2: "Electronics",
-        edu3Date: "2020",
-        edu3Title: "Advanced Data Analysis Nanodegree",
-        edu3Place: "Udacity Scholarship Program",
-        edu4Date: "2017 – 2019",
-        edu4Title: "English Access Micro-Scholarship Program",
-        edu4Place: "U.S. Embassy in Egypt",
-        edu4Text: "Two-year English language program, including training camps.",
-        experienceEyebrow: "Professional Journey",
-        experienceTitle: "Experience",
-        job1Date: "Apr 2023 – Present",
-        job1Title: "LRT Train Conductor",
-        job1Company: "RATP Dev Mobility Cairo · Badr City, Egypt",
-        job1Bullet1: "Operate Light Rail Transit trains on the main line and within the depot, following operational rules and instructions.",
-        job1Bullet2: "Prioritize passenger safety during normal, degraded, and emergency operating conditions.",
-        job1Bullet3: "Report incidents, accidents, train faults, and abnormal conditions to the traffic controller.",
-        job1Bullet4: "Follow onboard and wayside signalling indications and comply with operating procedures.",
-        job1Bullet5: "Carry out stabling and unstabling procedures and complete required pre-service safety checks.",
-        job1Bullet6: "Coordinate with operations control and depot personnel to support safe and reliable service.",
-        job2Date: "Dec 2022 – Mar 2023",
-        job2Title: "Customer Service Representative",
-        job2Company: "National Bank of Egypt · Cairo, Egypt",
-        job2Bullet1: "Supported customers with banking inquiries and service-related requests.",
-        job2Bullet2: "Worked to maintain service quality and follow customer protection procedures.",
-        job2Bullet3: "Followed relevant procedures for identifying and reporting suspicious activity.",
-        job3Date: "Jun 2015 – Jul 2015",
-        job3Title: "Home Appliance Maintenance Trainee",
-        job3Company: "El-Araby Group · Egypt",
-        job3Text: "Introductory practical exposure to home appliance maintenance and technical troubleshooting.",
-        projectsEyebrow: "Engineering & Innovation",
-        projectsTitle: "Projects",
-        projectsIntro: "Academic work and project concepts connecting engineering, railways, and data.",
-        project1Title: "Self-Driving Car with Text-to-Speech Recognition",
-        project1Text: "An academic project exploring a small autonomous vehicle using electronic sensors and embedded hardware.",
-        project2Title: "PLC-Based Railway Interlocking with SCADA Monitoring",
-        project2Text: "A proposed graduation project to model railway routes and interlocking logic, with supervisory monitoring and simulated status displays.",
-        project3Title: "AI Passenger Flow Prediction for Metro Stations",
-        project3Text: "A proposed data science project to analyze passenger counts and predict demand for future time periods, supporting operational planning.",
-        skillsEyebrow: "Technical Toolkit",
-        skillsTitle: "Skills",
-        skillGroup1: "Railway Operations & Safety",
-        skill1: "LRT Operations",
-        skill2: "Passenger Safety",
-        skill3: "Operating Procedures",
-        skill4: "Signalling Compliance",
-        skill5: "Incident Reporting",
-        skillGroup2: "Engineering & Automation",
-        skill6: "Control Systems",
-        skill7: "Motor Control",
-        skillGroup3: "Data & Programming",
-        skill8: "Data Analysis",
-        skill9: "Statistics",
-        skill10: "Data Visualization",
-        skillsNote: "Some automation and data topics are ongoing learning areas; the tags describe areas of experience and interest, not necessarily professional mastery.",
-        certificatesEyebrow: "Continuous Learning",
-        certificatesTitle: "Certificates & Courses",
-        certificatesIntro: "Selected courses and learning achievements across data, AI, engineering, and communication.",
-        languagesEyebrow: "Communication",
-        languagesTitle: "Languages",
-        languageArabic: "Arabic",
-        languageNative: "Native",
-        languageEnglish: "English",
-        languageEnglishLevel: "EF SET: 78/100 — C2 Proficient",
-        languageGerman: "German",
-        languageGermanLevel: "Language listed; level not specified.",
-        contactEyebrow: "Let's Connect",
-        contactTitle: "Contact & Profiles",
-        contactIntro: "Explore my professional profiles and follow my learning journey.",
-        contactNameTitle: "Full Name",
-        fullNameArabic: "يحى محمد سيد أبوسريع",
-        footerRights: "All rights reserved."
-      },
-
-      ar: {
-        navAbout: "نبذة عني",
-        navEducation: "التعليم",
-        navExperience: "الخبرات",
-        navProjects: "المشروعات",
-        navSkills: "المهارات",
-        navCertificates: "الشهادات",
-        navContact: "التواصل",
-        heroEyebrow: "الهندسة • تشغيل السكك الحديدية • التكنولوجيا",
-        heroGreeting: "أهلًا، أنا",
-        heroName: "يحى محمد",
-        heroDescription: "طالب هندسة ميكاترونكس وقائد قطار بالقطار الكهربائي الخفيف، مهتم بأنظمة السكك الحديدية والأتمتة والإلكترونيات والذكاء الاصطناعي وعلوم البيانات.",
-        heroProjects: "استكشف مشروعاتي",
-        heroContact: "تواصل معي",
-        heroLinkedIn: "حساب لينكدإن",
-        statusChip: "الهندسة والابتكار",
-        aboutEyebrow: "مقدمة",
-        aboutTitle: "نبذة عني",
-        aboutIntro: "أجمع بين الخبرة العملية في تشغيل السكك الحديدية والتفكير الهندسي.",
-        aboutCardTitle: "الملخص المهني",
-        aboutText: "أعمل في تشغيل القطار الكهربائي الخفيف (LRT) بالتوازي مع دراسة هندسة الميكاترونكس بجامعة طنطا. تشمل اهتماماتي إشارات السكك الحديدية وأنظمة التحكم والأتمتة والأنظمة المدمجة والذكاء الاصطناعي وتحليل البيانات. أسعى إلى الربط بين الخبرة التشغيلية الفعلية والحلول الهندسية المعتمدة على البيانات.",
-        highlightsTitle: "أبرز النقاط",
-        highlight1: "تشغيل قطارات القطار الكهربائي الخفيف وسلامة الركاب",
-        highlight2: "أساسيات الميكاترونكس والإلكترونيات والتحكم",
-        highlight3: "أساسيات بايثون وتحليل البيانات وتعلم الآلة",
-        highlight4: "الاهتمام بإشارات السكك الحديدية والأتمتة",
-        educationEyebrow: "الخلفية الأكاديمية",
-        educationTitle: "التعليم",
-        edu1Date: "ديسمبر 2023 – متوقع 2028",
-        edu1Title: "بكالوريوس الهندسة في هندسة الميكاترونكس",
-        edu1Place: "كلية الهندسة، جامعة طنطا، مصر",
-        edu1Tag1: "الروبوتات",
-        edu1Tag2: "الأتمتة",
-        edu1Tag3: "أنظمة التحكم",
-        edu2Date: "أكتوبر 2017 – يوليو 2021",
-        edu2Title: "بكالوريوس التكنولوجيا والتعليم – تكنولوجيا الإلكترونيات",
-        edu2Place: "جامعة حلوان، القاهرة، مصر",
-        edu2Tag1: "جيد جدًا مع مرتبة الشرف",
-        edu2Tag2: "الإلكترونيات",
-        edu3Date: "2020",
-        edu3Title: "دبلومة تحليل البيانات المتقدم",
-        edu3Place: "برنامج منحة Udacity",
-        edu4Date: "2017 – 2019",
-        edu4Title: "برنامج منحة Access لتعلم اللغة الإنجليزية",
-        edu4Place: "السفارة الأمريكية في مصر",
-        edu4Text: "برنامج لتعلم الإنجليزية لمدة عامين، تضمن معسكرات تدريبية.",
-        experienceEyebrow: "المسيرة المهنية",
-        experienceTitle: "الخبرات العملية",
-        job1Date: "أبريل 2023 – حتى الآن",
-        job1Title: "قائد قطار بالقطار الكهربائي الخفيف",
-        job1Company: "RATP Dev Mobility Cairo · مدينة بدر، مصر",
-        job1Bullet1: "تشغيل قطارات القطار الكهربائي الخفيف على الخط الرئيسي وداخل المستودع وفقًا لقواعد التشغيل والتعليمات.",
-        job1Bullet2: "إعطاء الأولوية لسلامة الركاب في ظروف التشغيل العادية والمتدهورة والطوارئ.",
-        job1Bullet3: "إبلاغ مراقب الحركة بالحوادث والأعطال والظروف غير الطبيعية.",
-        job1Bullet4: "اتباع إشارات التحكم الموجودة على القطار وعلى جانب المسار والالتزام بإجراءات التشغيل.",
-        job1Bullet5: "تنفيذ إجراءات إيداع القطارات وإخراجها من المستودع وإجراء فحوصات السلامة المطلوبة قبل الخدمة.",
-        job1Bullet6: "التنسيق مع مركز التحكم وموظفي المستودع لدعم التشغيل الآمن والمنتظم.",
-        job2Date: "ديسمبر 2022 – مارس 2023",
-        job2Title: "ممثل خدمة عملاء",
-        job2Company: "البنك الأهلي المصري · القاهرة، مصر",
-        job2Bullet1: "مساعدة العملاء في الاستفسارات المصرفية وطلبات الخدمات.",
-        job2Bullet2: "العمل على الحفاظ على جودة الخدمة واتباع إجراءات حماية العملاء.",
-        job2Bullet3: "اتباع الإجراءات ذات الصلة للتعرف على الأنشطة المشبوهة والإبلاغ عنها.",
-        job3Date: "يونيو 2015 – يوليو 2015",
-        job3Title: "متدرب صيانة أجهزة منزلية",
-        job3Company: "مجموعة العربي · مصر",
-        job3Text: "تدريب عملي تمهيدي على صيانة الأجهزة المنزلية واكتشاف الأعطال الفنية.",
-        projectsEyebrow: "الهندسة والابتكار",
-        projectsTitle: "المشروعات",
-        projectsIntro: "مشروعات أكاديمية وأفكار تربط بين الهندسة والسكك الحديدية والبيانات.",
-        project1Title: "سيارة ذاتية القيادة مع التعرف على الكلام وتحويل النص إلى صوت",
-        project1Text: "مشروع أكاديمي لاستكشاف تصميم سيارة صغيرة ذاتية الحركة باستخدام الحساسات الإلكترونية والمكونات المدمجة.",
-        project2Title: "تصميم نظام تشابك لإشارات السكك الحديدية باستخدام PLC ومراقبته عبر SCADA",
-        project2Text: "فكرة مشروع تخرج مقترحة لنمذجة المسارات ومنطق التشابك بين الإشارات، مع المراقبة وعرض الحالات بصورة محاكاة.",
-        project3Title: "التنبؤ بأعداد الركاب في محطات المترو باستخدام الذكاء الاصطناعي",
-        project3Text: "مشروع مقترح في علوم البيانات لتحليل أعداد الركاب والتنبؤ بالطلب في الفترات القادمة لدعم تخطيط التشغيل.",
-        skillsEyebrow: "الأدوات التقنية",
-        skillsTitle: "المهارات",
-        skillGroup1: "تشغيل السكك الحديدية والسلامة",
-        skill1: "تشغيل القطار الكهربائي الخفيف",
-        skill2: "سلامة الركاب",
-        skill3: "إجراءات التشغيل",
-        skill4: "الالتزام بالإشارات",
-        skill5: "الإبلاغ عن الحوادث",
-        skillGroup2: "الهندسة والأتمتة",
-        skill6: "أنظمة التحكم",
-        skill7: "التحكم في المحركات",
-        skillGroup3: "البيانات والبرمجة",
-        skill8: "تحليل البيانات",
-        skill9: "الإحصاء",
-        skill10: "تصوير البيانات",
-        skillsNote: "بعض موضوعات الأتمتة والبيانات ما زالت ضمن مجالات التعلم المستمر؛ وتوضح هذه الوسوم مجالات الخبرة والاهتمام ولا تعني بالضرورة الاحتراف الكامل.",
-        certificatesEyebrow: "التعلم المستمر",
-        certificatesTitle: "الشهادات والدورات",
-        certificatesIntro: "مجموعة مختارة من الدورات والإنجازات التعليمية في البيانات والذكاء الاصطناعي والهندسة والتواصل.",
-        languagesEyebrow: "التواصل",
-        languagesTitle: "اللغات",
-        languageArabic: "العربية",
-        languageNative: "اللغة الأم",
-        languageEnglish: "الإنجليزية",
-        languageEnglishLevel: "EF SET: ‏78/100 — مستوى C2 متقدم",
-        languageGerman: "الألمانية",
-        languageGermanLevel: "اللغة مذكورة دون تحديد المستوى.",
-        contactEyebrow: "لنتواصل",
-        contactTitle: "التواصل والحسابات",
-        contactIntro: "يمكنك زيارة حساباتي المهنية ومتابعة رحلتي في التعلم.",
-        contactNameTitle: "الاسم الكامل",
-        fullNameArabic: "يحى محمد سيد أبوسريع",
-        footerRights: "جميع الحقوق محفوظة."
-      }
-    };
-
-    const languageButton = document.getElementById("languageButton");
-    const menuButton = document.getElementById("menuButton");
+    const languageToggle = document.getElementById("languageToggle");
+    const menuToggle = document.getElementById("menuToggle");
     const navLinks = document.getElementById("navLinks");
 
     function setLanguage(language) {
-      const selectedLanguage = translations[language] ? language : "en";
+      const isArabic = language === "ar";
 
-      document.documentElement.lang = selectedLanguage;
-      document.documentElement.dir = selectedLanguage === "ar" ? "rtl" : "ltr";
+      document.documentElement.lang = isArabic ? "ar" : "en";
+      document.documentElement.dir = isArabic ? "rtl" : "ltr";
+      document.body.dir = isArabic ? "rtl" : "ltr";
 
-      document.querySelectorAll("[data-i18n]").forEach((element) => {
-        const key = element.getAttribute("data-i18n");
-        const translation = translations[selectedLanguage][key];
-
-        if (typeof translation === "string") {
-          element.textContent = translation;
-        }
+      document.querySelectorAll("[data-en][data-ar]").forEach((element) => {
+        element.textContent = isArabic
+          ? element.getAttribute("data-ar")
+          : element.getAttribute("data-en");
       });
 
-      languageButton.textContent = selectedLanguage === "en" ? "العربية" : "English";
-      languageButton.setAttribute(
-        "aria-label",
-        selectedLanguage === "en" ? "التبديل إلى اللغة العربية" : "Switch to English"
-      );
-
-      document.title = selectedLanguage === "ar"
-        ? "يحى محمد سيد أبوسريع | مهندس ميكاترونكس"
-        : "Yahya Mohamed Sayed Abosreaa | Mechatronics Engineer";
+      languageToggle.textContent = isArabic ? "English" : "العربية";
 
       try {
-        localStorage.setItem("portfolio-language", selectedLanguage);
+        localStorage.setItem("portfolioLanguage", language);
       } catch (error) {
-        // The site still works if browser storage is unavailable.
+        // The page remains usable if browser storage is unavailable.
       }
     }
 
-    languageButton.addEventListener("click", () => {
-      const nextLanguage = document.documentElement.lang === "en" ? "ar" : "en";
+    languageToggle.addEventListener("click", () => {
+      const nextLanguage =
+        document.documentElement.lang === "ar" ? "en" : "ar";
+
       setLanguage(nextLanguage);
     });
 
-    menuButton.addEventListener("click", () => {
+    menuToggle.addEventListener("click", () => {
       const isOpen = navLinks.classList.toggle("open");
-      menuButton.setAttribute("aria-expanded", String(isOpen));
-      menuButton.textContent = isOpen ? "✕" : "☰";
+
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+      );
     });
 
     navLinks.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => {
         navLinks.classList.remove("open");
-        menuButton.setAttribute("aria-expanded", "false");
-        menuButton.textContent = "☰";
+        menuToggle.setAttribute("aria-expanded", "false");
       });
     });
 
-    document.getElementById("currentYear").textContent = new Date().getFullYear();
-
-    document.getElementById("backToTop").addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
+    document.getElementById("currentYear").textContent =
+      new Date().getFullYear();
 
     let savedLanguage = "en";
 
     try {
-      const storedLanguage = localStorage.getItem("portfolio-language");
-      if (storedLanguage === "ar" || storedLanguage === "en") {
-        savedLanguage = storedLanguage;
-      }
+      savedLanguage = localStorage.getItem("portfolioLanguage") || "en";
     } catch (error) {
-      // Use English by default if browser storage is unavailable.
+      savedLanguage = "en";
     }
 
     setLanguage(savedLanguage);
   </script>
 </body>
 </html>
-
