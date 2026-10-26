@@ -4,70 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Yahya Mohamed Sayed Abosreaa | Engineering Portfolio</title>
-
-  <meta name="description" content="The personal portfolio of Yahya Mohamed Sayed Abosreaa, an Electronics Technology graduate and Mechatronics Engineering student at Tanta University, interested in railway systems, industrial automation, PLC, SCADA, data analysis and AI.">
-
+  <title>Yahya Mohamed Sayed Abosreaa | Mechatronics Engineer</title>
+  <meta name="description" content="Official portfolio of Yahya Mohamed Sayed Abosreaa, Electronics Technology graduate and Mechatronics Engineering student interested in railway systems, automation, PLC, SCADA, and data science.">
   <meta name="author" content="Yahya Mohamed Sayed Abosreaa">
-  <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#07111f">
 
-  <meta name="google-site-verification" content="PCd0Nrr4--hb4gfkpMxIYzMWFjvrIWzdDLta73WaV7M">
-
-  <link rel="canonical" href="https://yahya-mohamed.github.io/">
-
-  <!-- Social sharing metadata -->
-  <meta property="og:type" content="website">
   <meta property="og:title" content="Yahya Mohamed Sayed Abosreaa | Engineering Portfolio">
-  <meta property="og:description" content="Electronics Technology Graduate | Mechatronics Engineering Student | Railway Systems, Automation and Data Science">
+  <meta property="og:description" content="Engineering, railway systems, automation, and data science portfolio.">
+  <meta property="og:type" content="website">
   <meta property="og:url" content="https://yahya-mohamed.github.io/">
   <meta property="og:image" content="https://yahya-mohamed.github.io/profile.png">
-  <meta property="og:image:alt" content="Portrait of Yahya Mohamed Sayed Abosreaa">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Yahya Mohamed Sayed Abosreaa">
-  <meta name="twitter:description" content="Engineering, Railway Systems, Automation and Data Science">
+  <meta name="twitter:description" content="Mechatronics Engineering | Railway Systems | Automation">
   <meta name="twitter:image" content="https://yahya-mohamed.github.io/profile.png">
 
-  <!-- Website icon -->
-  <link rel="icon" href="./profile.png" type="image/png">
-  <link rel="apple-touch-icon" href="./profile.png">
+  <meta name="google-site-verification" content="PCd0Nrr4--hb4gfkpMxIYzMWFjvrIWzdDLta73WaV7M">
 
-  <!-- Structured data for search engines -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Yahya Mohamed Sayed Abosreaa",
-    "url": "https://yahya-mohamed.github.io/",
-    "image": "https://yahya-mohamed.github.io/profile.png",
-    "jobTitle": "Train Driver",
-    "alumniOf": {
-      "@type": "CollegeOrUniversity",
-      "name": "Helwan University"
-    },
-    "sameAs": [
-      "https://eg.linkedin.com/in/yahya-mohamed-sayed",
-      "https://github.com/YahYa-mohamed",
-      "https://www.kaggle.com/yahyamohamedsayed",
-      "https://youtube.com/@yahyamohamedsayed",
-      "https://www.facebook.com/profile.php?id=100010721436788"
-    ]
-  }
-  </script>
+  <link rel="icon" href="https://yahya-mohamed.github.io/profile.png" type="image/png">
+  <link rel="apple-touch-icon" href="https://yahya-mohamed.github.io/profile.png">
 
   <style>
     :root {
       --bg: #07111f;
-      --surface: #0e1b2d;
-      --surface-light: #13243a;
+      --panel: #101d30;
       --text: #edf4ff;
-      --muted: #a9bad0;
-      --accent: #50c8ff;
-      --accent-2: #8b9dff;
-      --border: rgba(255,255,255,.10);
-      --radius: 20px;
-      --max-width: 1080px;
+      --muted: #a8b7cc;
+      --accent: #42d9ff;
+      --border: rgba(255,255,255,.1);
     }
 
     * {
@@ -83,110 +48,73 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background:
-        radial-gradient(ellipse at 10% 5%, rgba(40,125,190,.15), transparent 38%),
-        radial-gradient(ellipse at 95% 40%, rgba(94,92,220,.10), transparent 35%),
-        var(--bg);
+      background: var(--bg);
       color: var(--text);
       line-height: 1.7;
     }
 
     a {
-      color: inherit;
+      color: var(--accent);
       text-decoration: none;
     }
 
-    a:focus-visible {
-      outline: 2px solid var(--accent);
-      outline-offset: 4px;
+    a:hover {
+      text-decoration: underline;
     }
 
     .container {
-      width: min(var(--max-width), 90%);
-      margin-inline: auto;
+      width: min(1100px, 92%);
+      margin: auto;
     }
 
     header {
       position: sticky;
       top: 0;
       z-index: 10;
-      background: rgba(7,17,31,.90);
-      backdrop-filter: blur(14px);
+      background: rgba(7,17,31,.96);
       border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
     }
 
-    .nav {
-      min-height: 70px;
+    nav {
+      min-height: 68px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
+      gap: 16px;
+      flex-wrap: wrap;
+      padding: 12px 0;
     }
 
     .brand {
-      font-size: 1rem;
       font-weight: 800;
-      letter-spacing: .3px;
-    }
-
-    .brand span {
-      color: var(--accent);
+      color: var(--text);
+      font-size: 17px;
     }
 
     .nav-links {
       display: flex;
-      align-items: center;
-      gap: 20px;
+      gap: 16px;
       flex-wrap: wrap;
-    }
-
-    .nav-links a {
-      color: var(--muted);
-      font-size: .88rem;
-      transition: color .2s;
-    }
-
-    .nav-links a:hover {
-      color: var(--accent);
+      font-size: 14px;
     }
 
     .hero {
-      min-height: 680px;
-      padding: 90px 0 80px;
+      padding: 78px 0 65px;
+      background:
+        radial-gradient(ellipse at top right, rgba(66,217,255,.12), transparent 48%);
+    }
+
+    .hero-layout {
       display: grid;
-      place-items: center;
-      text-align: center;
-    }
-
-    .hero-content {
-      width: 100%;
-      max-width: 850px;
-      margin: auto;
-    }
-
-    .profile-frame {
-      width: 184px;
-      height: 184px;
-      padding: 5px;
-      margin: 0 auto 26px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      box-shadow: 0 0 55px rgba(80,200,255,.16);
-    }
-
-    .profile-photo {
-      display: block;
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid var(--bg);
-      background: var(--surface-light);
+      grid-template-columns: 1fr 230px;
+      gap: 40px;
+      align-items: center;
     }
 
     .eyebrow {
       color: var(--accent);
-      font-size: .82rem;
+      font-size: 13px;
       font-weight: 700;
       letter-spacing: 2px;
       text-transform: uppercase;
@@ -194,100 +122,91 @@
     }
 
     h1 {
-      font-size: clamp(2rem, 5.5vw, 3.5rem);
-      line-height: 1.2;
-      letter-spacing: -1px;
-      overflow-wrap: anywhere;
+      font-size: clamp(32px, 5vw, 52px);
+      line-height: 1.15;
       margin-bottom: 16px;
+      overflow-wrap: anywhere;
     }
 
-    .headline {
-      font-size: clamp(1.05rem, 2.7vw, 1.35rem);
+    .subtitle {
+      color: var(--accent);
+      font-size: clamp(17px, 2.5vw, 21px);
+      margin-bottom: 18px;
       font-weight: 700;
-      color: #d6e7ff;
-      margin-bottom: 14px;
     }
 
-    .hero-description {
-      max-width: 690px;
-      margin: 0 auto 26px;
+    .intro {
       color: var(--muted);
-      font-size: 1rem;
+      max-width: 680px;
+      margin-bottom: 24px;
     }
 
-    .tags {
+    .profile-frame {
+      width: 210px;
+      height: 210px;
+      justify-self: center;
+      border-radius: 50%;
+      border: 3px solid var(--accent);
+      padding: 5px;
+      background: var(--panel);
+      box-shadow: 0 0 35px rgba(66,217,255,.15);
+      overflow: hidden;
+    }
+
+    .profile-photo {
+      display: block !important;
+      width: 100% !important;
+      height: 100% !important;
+      max-width: none !important;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 50%;
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+
+    .buttons {
       display: flex;
-      justify-content: center;
-      gap: 10px;
       flex-wrap: wrap;
-      margin: 24px 0 30px;
-    }
-
-    .tag {
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      padding: 7px 13px;
-      background: rgba(255,255,255,.035);
-      color: #d7e7fa;
-      font-size: .82rem;
-    }
-
-    .actions {
-      display: flex;
-      justify-content: center;
       gap: 12px;
-      flex-wrap: wrap;
     }
 
-    .button {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      gap: 8px;
-      min-height: 46px;
-      padding: 11px 19px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      font-size: .92rem;
+    .btn {
+      display: inline-block;
+      padding: 10px 18px;
+      border: 1px solid var(--accent);
+      border-radius: 8px;
       font-weight: 700;
-      transition: transform .2s, background .2s;
+      transition: .2s;
     }
 
-    .button:hover {
-      transform: translateY(-2px);
-    }
-
-    .button-primary {
-      color: #04111c;
+    .btn.primary {
       background: var(--accent);
-      border-color: var(--accent);
+      color: #06111d;
     }
 
-    .button-secondary {
-      background: var(--surface);
+    .btn.secondary {
+      color: var(--accent);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      text-decoration: none;
     }
 
     section {
-      padding: 75px 0;
+      padding: 54px 0;
+      border-top: 1px solid var(--border);
     }
 
-    .section-heading {
-      margin-bottom: 30px;
-    }
-
-    .section-heading .eyebrow {
-      margin-bottom: 5px;
-    }
-
-    h2 {
-      font-size: clamp(1.7rem, 4vw, 2.3rem);
-      line-height: 1.3;
+    .section-title {
+      font-size: 28px;
+      margin-bottom: 8px;
     }
 
     .section-intro {
       color: var(--muted);
-      max-width: 720px;
-      margin-top: 12px;
+      margin-bottom: 25px;
     }
 
     .grid {
@@ -297,610 +216,421 @@
     }
 
     .card {
-      min-width: 0;
-      padding: 25px;
-      background: linear-gradient(145deg, var(--surface), rgba(14,27,45,.75));
+      background: var(--panel);
       border: 1px solid var(--border);
-      border-radius: var(--radius);
-      transition: transform .2s, border-color .2s;
+      border-radius: 14px;
+      padding: 23px;
+      min-width: 0;
     }
 
-    .card:hover {
-      transform: translateY(-3px);
-      border-color: rgba(80,200,255,.4);
-    }
-
-    .card-icon {
-      font-size: 1.8rem;
-      margin-bottom: 12px;
-    }
-
-    h3 {
-      font-size: 1.15rem;
-      margin-bottom: 10px;
+    .card h3 {
+      color: var(--accent);
+      font-size: 18px;
+      margin-bottom: 9px;
     }
 
     .card p,
     .card li {
       color: var(--muted);
-      font-size: .95rem;
     }
 
     .card ul {
       padding-left: 20px;
-      margin-top: 10px;
     }
 
-    .card li + li {
-      margin-top: 7px;
-    }
-
-    .timeline {
-      display: grid;
-      gap: 18px;
-    }
-
-    .timeline-item {
-      padding: 23px 25px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--accent);
-      border-radius: 12px;
-    }
-
-    .timeline-item p {
-      color: var(--muted);
-      margin-top: 7px;
-    }
-
-    .status {
-      display: inline-block;
-      color: var(--accent);
-      font-size: .78rem;
-      font-weight: 700;
-      margin-bottom: 8px;
-      text-transform: uppercase;
-      letter-spacing: .6px;
-    }
-
-    .project-note {
-      margin-top: 20px;
-      color: var(--muted);
-      font-size: .9rem;
-    }
-
-    .social-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .social-link {
+    .tags {
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 5px;
-      padding: 19px;
-      background: var(--surface);
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 14px;
+    }
+
+    .tag {
+      border: 1px solid rgba(66,217,255,.3);
+      background: rgba(66,217,255,.07);
+      color: var(--text);
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 13px;
+    }
+
+    .links-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .link-item {
+      background: var(--panel);
       border: 1px solid var(--border);
-      border-radius: 15px;
-      transition: border-color .2s, transform .2s;
-    }
-
-    .social-link:hover {
-      border-color: var(--accent);
-      transform: translateY(-2px);
-    }
-
-    .social-link strong {
-      font-size: 1rem;
-    }
-
-    .social-link span {
-      color: var(--muted);
-      font-size: .82rem;
+      padding: 15px 18px;
+      border-radius: 10px;
       overflow-wrap: anywhere;
     }
 
-    .contact-panel {
-      text-align: center;
-      padding: 40px 25px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      background: linear-gradient(135deg, var(--surface), var(--surface-light));
-    }
-
-    .contact-panel p {
+    .link-item span {
       color: var(--muted);
-      max-width: 600px;
-      margin: 12px auto 22px;
+      margin-right: 8px;
     }
 
     footer {
-      border-top: 1px solid var(--border);
       padding: 25px 0;
+      border-top: 1px solid var(--border);
       color: var(--muted);
-      font-size: .85rem;
       text-align: center;
-    }
-
-    .back-to-top {
-      display: inline-block;
-      margin-top: 8px;
-      color: var(--accent);
+      font-size: 13px;
     }
 
     @media (max-width: 700px) {
-      .nav {
-        padding: 13px 0;
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      .nav-links {
-        gap: 14px;
-      }
-
       .hero {
-        min-height: auto;
-        padding: 65px 0 55px;
+        padding-top: 45px;
+      }
+
+      .hero-layout {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 28px;
       }
 
       .profile-frame {
-        width: 155px;
-        height: 155px;
+        grid-row: 1;
+        width: 175px;
+        height: 175px;
+      }
+
+      .buttons {
+        justify-content: center;
       }
 
       .grid {
         grid-template-columns: 1fr;
       }
 
-      .social-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      section {
-        padding: 55px 0;
-      }
-
-      .card {
-        padding: 21px;
-      }
-    }
-
-    @media (max-width: 390px) {
-      .social-grid {
-        grid-template-columns: 1fr;
+      nav {
+        justify-content: center;
       }
 
       .nav-links {
-        gap: 10px;
-      }
-
-      .nav-links a {
-        font-size: .82rem;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      *,
-      *::before,
-      *::after {
-        transition-duration: .01ms !important;
-        animation-duration: .01ms !important;
+        justify-content: center;
       }
     }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Yahya Mohamed Sayed Abosreaa",
+    "url": "https://yahya-mohamed.github.io/",
+    "image": "https://yahya-mohamed.github.io/profile.png",
+    "jobTitle": "Mechatronics Engineering Student",
+    "alumniOf": [
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Helwan University"
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Tanta University"
+      }
+    ],
+    "sameAs": [
+      "https://eg.linkedin.com/in/yahya-mohamed-sayed",
+      "https://github.com/YahYa-mohamed",
+      "https://www.kaggle.com/yahyamohamedsayed",
+      "https://youtube.com/@yahyamohamedsayed",
+      "https://www.facebook.com/profile.php?id=100010721436788"
+    ]
+  }
+  </script>
 </head>
 
-<body id="top">
-
+<body>
   <header>
-    <div class="container nav">
-      <a class="brand" href="#top">Yahya<span>.</span></a>
+    <nav class="container">
+      <a class="brand" href="#home">Yahya Mohamed</a>
 
-      <nav class="nav-links" aria-label="Main navigation">
+      <div class="nav-links">
         <a href="#about">About</a>
         <a href="#education">Education</a>
         <a href="#experience">Experience</a>
-        <a href="#interests">Interests</a>
+        <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#profiles">Profiles</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
+      </div>
+    </nav>
   </header>
 
   <main>
+    <section class="hero" id="home">
+      <div class="container hero-layout">
+        <div>
+          <p class="eyebrow">Engineering Portfolio</p>
 
-    <!-- HERO / PROFILE -->
-    <section class="hero">
-      <div class="container hero-content">
+          <h1>Yahya Mohamed Sayed Abosreaa</h1>
+
+          <p class="subtitle">
+            Mechatronics Engineering | Railway Systems | Automation
+          </p>
+
+          <p class="intro">
+            Electronics Technology graduate and Mechatronics Engineering
+            student interested in railway systems, industrial automation,
+            PLC, SCADA, and data-driven engineering solutions.
+            My goal is to connect practical railway operations experience
+            with engineering, automation, and data science.
+          </p>
+
+          <div class="buttons">
+            <a class="btn primary"
+               href="https://eg.linkedin.com/in/yahya-mohamed-sayed"
+               target="_blank" rel="noopener noreferrer">
+              LinkedIn Profile
+            </a>
+
+            <a class="btn secondary"
+               href="https://github.com/YahYa-mohamed"
+               target="_blank" rel="noopener noreferrer">
+              GitHub
+            </a>
+
+            <a class="btn secondary" href="#projects">
+              View Projects
+            </a>
+          </div>
+        </div>
 
         <div class="profile-frame">
           <img
             class="profile-photo"
-            src="./profile.png"
+            src="https://yahya-mohamed.github.io/profile.png"
             alt="Portrait of Yahya Mohamed Sayed Abosreaa"
-            width="184"
-            height="184"
+            width="200"
+            height="200"
             fetchpriority="high"
+            onerror="this.onerror=null; this.src='./profile.png';"
           >
         </div>
-
-        <p class="eyebrow">Personal Portfolio</p>
-
-        <h1>Yahya Mohamed Sayed Abosreaa</h1>
-
-        <p class="headline">
-          Electronics Technology Graduate |
-          Mechatronics Engineering Student
-        </p>
-
-        <p class="hero-description">
-          Railway operations professional with an academic background
-          in electronics technology and ongoing studies in mechatronics
-          engineering. Interested in railway systems, industrial automation,
-          control systems, programming, data analysis and artificial intelligence.
-        </p>
-
-        <div class="tags">
-          <span class="tag">Railway Systems</span>
-          <span class="tag">Electronics</span>
-          <span class="tag">Mechatronics</span>
-          <span class="tag">PLC &amp; SCADA</span>
-          <span class="tag">Data Analysis</span>
-          <span class="tag">Artificial Intelligence</span>
-        </div>
-
-        <div class="actions">
-          <a
-            class="button button-primary"
-            href="https://eg.linkedin.com/in/yahya-mohamed-sayed"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Connect on LinkedIn
-          </a>
-
-          <a class="button button-secondary" href="#about">
-            Explore My Portfolio
-          </a>
-        </div>
-
       </div>
     </section>
 
-    <!-- ABOUT -->
     <section id="about">
       <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Introduction</p>
-          <h2>About Me</h2>
-          <p class="section-intro">
-            Combining practical railway operations experience with
-            engineering education and a growing interest in technology.
-          </p>
-        </div>
+        <h2 class="section-title">About Me</h2>
+        <p class="section-intro">
+          Engineering background with an interest in railway technology,
+          control systems, and intelligent engineering applications.
+        </p>
 
         <div class="card">
           <p>
-            I am an Electronics Technology graduate and a Mechatronics
-            Engineering student at Tanta University. My professional
-            experience in railway operations has encouraged me to deepen
-            my understanding of railway technology, operational safety,
-            control systems and engineering problem-solving.
+            I hold a bachelor's degree in Electronics Technology and am
+            continuing my studies in Mechatronics Engineering at Tanta
+            University. I am interested in railway signalling, industrial
+            control, programmable logic controllers, supervisory control
+            systems, and applying data analysis to improve railway
+            operations and reliability.
           </p>
 
-          <p style="margin-top: 14px;">
-            I am interested in connecting engineering with modern digital
-            technologies, particularly industrial automation, programmable
-            logic controllers, supervisory control systems, programming,
-            data analysis and artificial intelligence.
-          </p>
-
-          <p style="margin-top: 14px;">
-            My long-term goal is to continue developing my technical
-            knowledge and contribute to reliable, efficient and data-driven
-            railway and industrial systems.
-          </p>
+          <div class="tags">
+            <span class="tag">Electronics Technology</span>
+            <span class="tag">Mechatronics Engineering</span>
+            <span class="tag">Railway Systems</span>
+            <span class="tag">Automation</span>
+            <span class="tag">Data Science</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- EDUCATION -->
     <section id="education">
       <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Academic Background</p>
-          <h2>Education</h2>
-        </div>
+        <h2 class="section-title">Education</h2>
+        <p class="section-intro">Academic background</p>
 
-        <div class="timeline">
-
-          <article class="timeline-item">
-            <span class="status">Completed</span>
-            <h3>Bachelor's Degree in Electronics Technology</h3>
-            <p>
-              Faculty of Technology and Education,
-              Helwan University, Egypt
-            </p>
-            <p>
-              Graduation year: 2022 · Overall grade:
-              Very Good with Honors · 84.5%
-            </p>
-          </article>
-
-          <article class="timeline-item">
-            <span class="status">In Progress</span>
+        <div class="grid">
+          <article class="card">
             <h3>Mechatronics Engineering</h3>
-            <p>Tanta University, Faculty of Engineering, Egypt</p>
+            <p><strong>Tanta University</strong></p>
             <p>
-              Undergraduate studies in mechatronics engineering.
-              Degree completion is in progress.
+              Currently pursuing engineering studies with an interest in
+              control, automation, robotics, and intelligent systems.
             </p>
           </article>
 
+          <article class="card">
+            <h3>Electronics Technology</h3>
+            <p><strong>Faculty of Technology and Education, Helwan University</strong></p>
+            <p>Bachelor's degree, 2022</p>
+            <p>Grade: Very Good with Honors — 84.5%</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- PROFESSIONAL EXPERIENCE -->
     <section id="experience">
       <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Professional Background</p>
-          <h2>Railway Operations</h2>
-          <p class="section-intro">
-            Practical experience that supports my interest in railway
-            systems, operational procedures and technical development.
-          </p>
-        </div>
+        <h2 class="section-title">Experience</h2>
+        <p class="section-intro">
+          Practical railway operations experience
+        </p>
 
         <article class="card">
           <h3>Train Driver — Railway Operations</h3>
           <p>
-            Professional experience in train operations, with an interest
-            in railway safety, operating procedures, system reliability
-            and the technologies that support railway services.
+            Approximately four years of experience in train operations.
+            Interested in applying operational knowledge to railway
+            engineering, signalling systems, safety, and reliability.
           </p>
-
-          <ul>
-            <li>Railway operations and operational procedures.</li>
-            <li>Safety awareness and adherence to operating rules.</li>
-            <li>Interest in railway signalling and control systems.</li>
-            <li>Connecting operational experience with engineering knowledge.</li>
-          </ul>
         </article>
       </div>
     </section>
 
-    <!-- TECHNICAL INTERESTS -->
-    <section id="interests">
+    <section id="skills">
       <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Technical Interests</p>
-          <h2>Areas of Interest</h2>
-          <p class="section-intro">
-            Technologies and engineering fields I am interested in
-            learning, developing and applying.
-          </p>
-        </div>
+        <h2 class="section-title">Technical Interests & Skills</h2>
+        <p class="section-intro">
+          Areas of study and professional development
+        </p>
 
         <div class="grid">
-
           <article class="card">
-            <div class="card-icon" aria-hidden="true">🚆</div>
-            <h3>Railway Systems</h3>
-            <p>
-              Railway signalling, interlocking concepts, operational
-              safety, train control and railway system reliability.
-            </p>
+            <h3>Railway Engineering</h3>
+            <ul>
+              <li>Railway signalling fundamentals</li>
+              <li>Interlocking systems</li>
+              <li>Railway safety and operations</li>
+              <li>Railway data applications</li>
+            </ul>
           </article>
 
           <article class="card">
-            <div class="card-icon" aria-hidden="true">⚙️</div>
-            <h3>Mechatronics &amp; Control</h3>
-            <p>
-              Control engineering, sensors, actuators, electromechanical
-              systems and system integration.
-            </p>
-          </article>
-
-          <article class="card">
-            <div class="card-icon" aria-hidden="true">🔌</div>
             <h3>Industrial Automation</h3>
-            <p>
-              PLC programming, HMI interfaces, SCADA monitoring,
-              electrical control circuits and industrial automation.
-            </p>
+            <ul>
+              <li>PLC — Programmable Logic Controller</li>
+              <li>SCADA — Supervisory Control and Data Acquisition</li>
+              <li>HMI — Human-Machine Interface</li>
+              <li>Control circuits and sensors</li>
+            </ul>
           </article>
 
           <article class="card">
-            <div class="card-icon" aria-hidden="true">📊</div>
-            <h3>Data Analysis</h3>
-            <p>
-              Data preparation, exploratory analysis, SQL, Python,
-              visualization and extracting useful insights from data.
-            </p>
+            <h3>Electronics & Mechatronics</h3>
+            <ul>
+              <li>Electronics fundamentals</li>
+              <li>Control systems</li>
+              <li>Electrical and electronic components</li>
+              <li>Mechanical and electrical integration</li>
+            </ul>
           </article>
 
           <article class="card">
-            <div class="card-icon" aria-hidden="true">🤖</div>
-            <h3>Artificial Intelligence</h3>
-            <p>
-              Machine learning and data-driven approaches to prediction,
-              optimization and transportation applications.
-            </p>
+            <h3>Data & Artificial Intelligence</h3>
+            <ul>
+              <li>Data analysis learning path</li>
+              <li>Python and SQL learning goals</li>
+              <li>Passenger-flow prediction concepts</li>
+              <li>Railway performance analysis</li>
+            </ul>
           </article>
-
-          <article class="card">
-            <div class="card-icon" aria-hidden="true">💻</div>
-            <h3>Programming &amp; Systems Engineering</h3>
-            <p>
-              Programming fundamentals, system design, requirements
-              analysis and engineering problem-solving.
-            </p>
-          </article>
-
         </div>
       </div>
     </section>
 
-    <!-- PROJECT DIRECTIONS -->
     <section id="projects">
       <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Learning &amp; Development</p>
-          <h2>Projects &amp; Future Directions</h2>
-          <p class="section-intro">
-            Engineering project directions that align with my academic
-            background and professional interests.
-          </p>
-        </div>
+        <h2 class="section-title">Projects & Learning</h2>
+        <p class="section-intro">
+          Engineering ideas and projects under development
+        </p>
 
         <div class="grid">
-
           <article class="card">
-            <div class="card-icon" aria-hidden="true">🚦</div>
             <h3>PLC-Based Railway Interlocking</h3>
             <p>
-              A proposed learning and graduation-project direction
-              focused on railway interlocking principles, PLC-based
-              control logic and SCADA monitoring.
+              Proposed project to explore railway route control and
+              interlocking logic using a programmable controller,
+              with a monitoring interface for educational purposes.
             </p>
-            <p style="margin-top: 12px;">
-              <strong>Focus:</strong> Railway signalling, control logic
-              and safety concepts.
-            </p>
+            <div class="tags">
+              <span class="tag">PLC</span>
+              <span class="tag">Interlocking</span>
+              <span class="tag">SCADA</span>
+            </div>
           </article>
 
           <article class="card">
-            <div class="card-icon" aria-hidden="true">📈</div>
-            <h3>Railway Passenger Flow Prediction</h3>
+            <h3>AI Passenger Flow Prediction</h3>
             <p>
-              A proposed data science project exploring passenger-flow
-              data to understand demand patterns and investigate
-              short-term prediction for metro stations.
+              Proposed data science project to study passenger counts,
+              identify peak periods, and predict future passenger flow
+              to support transport planning.
             </p>
-            <p style="margin-top: 12px;">
-              <strong>Focus:</strong> Data analysis, time-series
-              forecasting and transportation.
-            </p>
+            <div class="tags">
+              <span class="tag">Data Analysis</span>
+              <span class="tag">Python</span>
+              <span class="tag">Railway AI</span>
+            </div>
           </article>
-
         </div>
-
-        <p class="project-note">
-          Note: These are project directions, not claims of completed
-          projects. Project results and code can be added here as they
-          become available.
-        </p>
       </div>
     </section>
 
-    <!-- SOCIAL PROFILES -->
     <section id="profiles">
       <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Find Me Online</p>
-          <h2>Professional &amp; Social Profiles</h2>
-        </div>
+        <h2 class="section-title">Professional Profiles</h2>
+        <p class="section-intro">
+          Connect with me and explore my learning journey
+        </p>
 
-        <div class="social-grid">
+        <div class="links-list">
+          <div class="link-item">
+            <span>LinkedIn</span>
+            <a href="https://eg.linkedin.com/in/yahya-mohamed-sayed"
+               target="_blank" rel="noopener noreferrer">
+              linkedin.com/in/yahya-mohamed-sayed
+            </a>
+          </div>
 
-          <a
-            class="social-link"
-            href="https://eg.linkedin.com/in/yahya-mohamed-sayed"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <strong>LinkedIn ↗</strong>
-            <span>Professional profile</span>
-          </a>
+          <div class="link-item">
+            <span>GitHub</span>
+            <a href="https://github.com/YahYa-mohamed"
+               target="_blank" rel="noopener noreferrer">
+              github.com/YahYa-mohamed
+            </a>
+          </div>
 
-          <a
-            class="social-link"
-            href="https://github.com/YahYa-mohamed"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <strong>GitHub ↗</strong>
-            <span>Code and repositories</span>
-          </a>
+          <div class="link-item">
+            <span>Kaggle</span>
+            <a href="https://www.kaggle.com/yahyamohamedsayed"
+               target="_blank" rel="noopener noreferrer">
+              kaggle.com/yahyamohamedsayed
+            </a>
+          </div>
 
-          <a
-            class="social-link"
-            href="https://www.kaggle.com/yahyamohamedsayed"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <strong>Kaggle ↗</strong>
-            <span>Data science profile</span>
-          </a>
+          <div class="link-item">
+            <span>YouTube</span>
+            <a href="https://youtube.com/@yahyamohamedsayed"
+               target="_blank" rel="noopener noreferrer">
+              youtube.com/@yahyamohamedsayed
+            </a>
+          </div>
 
-          <a
-            class="social-link"
-            href="https://youtube.com/@yahyamohamedsayed"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <strong>YouTube ↗</strong>
-            <span>Video channel</span>
-          </a>
-
-          <a
-            class="social-link"
-            href="https://www.facebook.com/profile.php?id=100010721436788"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <strong>Facebook ↗</strong>
-            <span>Social profile</span>
-          </a>
-
+          <div class="link-item">
+            <span>Facebook</span>
+            <a href="https://www.facebook.com/profile.php?id=100010721436788"
+               target="_blank" rel="noopener noreferrer">
+              Facebook Profile
+            </a>
+          </div>
         </div>
       </div>
     </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <div class="container">
-        <div class="contact-panel">
-          <p class="eyebrow">Get in Touch</p>
-          <h2>Let's Connect</h2>
-          <p>
-            Interested in engineering, railway technology, industrial
-            automation or data-driven projects? Connect with me through
-            my professional profile.
-          </p>
-
-          <a
-            class="button button-primary"
-            href="https://eg.linkedin.com/in/yahya-mohamed-sayed"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Contact Me on LinkedIn ↗
-          </a>
-        </div>
-      </div>
-    </section>
-
   </main>
 
   <footer>
     <div class="container">
-      <p>
-        © <span id="year">2026</span>
-        Yahya Mohamed Sayed Abosreaa. All rights reserved.
-      </p>
-      <a class="back-to-top" href="#top">Back to top ↑</a>
+      © <span id="year">2026</span> Yahya Mohamed Sayed Abosreaa.
+      All rights reserved.
     </div>
   </footer>
 
@@ -908,6 +638,5 @@
     document.getElementById("year").textContent =
       new Date().getFullYear();
   </script>
-
 </body>
 </html>
